@@ -6,6 +6,9 @@ import type {
   PageFeatureProps,
   TableColumn,
 } from "@nuxt/ui";
+import type { LiftInterest } from "~/composables/useConsultationModal";
+
+const { openConsultation } = useConsultationModal();
 
 useSeoMeta({
   title: "Stiltz Homelifts in Orange County",
@@ -18,19 +21,19 @@ useSeoMeta({
 
 const heroLinks: ButtonProps[] = [
   {
+    label: "Get a Free Consultation",
+    size: "xl",
+    color: "primary",
+    trailingIcon: "i-lucide-arrow-right",
+    onClick: () => openConsultation(),
+  },
+  {
     label: "Call 949.235.4536",
     to: "tel:+19492354536",
     size: "xl",
-    color: "primary",
-    icon: "i-lucide-phone",
-  },
-  {
-    label: "Visit Irvine Showroom",
-    to: "/#showroom",
-    size: "xl",
     color: "neutral",
     variant: "subtle",
-    trailingIcon: "i-lucide-arrow-right",
+    icon: "i-lucide-phone",
   },
 ];
 
@@ -86,7 +89,7 @@ const liftModels: (PageCardProps & {
   image: string;
   imageAlt: string;
   specs: string[];
-  to: string;
+  interestValue: LiftInterest;
 })[] = [
   {
     badge: "01 · Compact 2-Person",
@@ -100,7 +103,7 @@ const liftModels: (PageCardProps & {
     variant: "subtle",
     spotlight: true,
     spotlightColor: "primary",
-    to: "/#showroom",
+    interestValue: "Stiltz Duo+ (Compact 2-Person)",
   },
   {
     badge: "02 · Wheelchair Accessible",
@@ -114,7 +117,7 @@ const liftModels: (PageCardProps & {
     variant: "subtle",
     spotlight: true,
     spotlightColor: "secondary",
-    to: "/#showroom",
+    interestValue: "Stiltz Trio+ (Wheelchair Accessible)",
   },
   {
     badge: "03 · Clear Panoramic Option",
@@ -128,7 +131,7 @@ const liftModels: (PageCardProps & {
     variant: "subtle",
     spotlight: true,
     spotlightColor: "primary",
-    to: "/#showroom",
+    interestValue: "Stiltz Vista (Clear Panoramic)",
   },
 ];
 
@@ -227,12 +230,19 @@ const adChecklist = [
   "Fully guaranteed",
 ];
 
+const consultationBenefits = [
+  "Free, no-obligation in-home assessment across Orange County",
+  "Private test-ride appointments at our Irvine showroom",
+  "Transparent turnkey pricing including standard carpentry guidance",
+  "Direct coordination with homeowners, builders, and architects",
+];
+
 const faqItems: AccordionItem[] = [
   {
     label: "Can I see and ride a Stiltz Homelift before buying?",
     icon: "i-lucide-map-pin",
     content:
-      "Yes! Upside Home Lifts operates a dedicated showroom in Irvine at 17155 Von Karman Ave #101. Call Jeff Cullen at 949.235.4536 to book a private appointment and ask about our OC 55+ Special.",
+      "Yes! Upside Home Lifts operates a dedicated showroom in Irvine at 17155 Von Karman Ave #101. Call Jeff Cullen at 949.235.4536 or submit the consultation form below to book a private appointment and ask about our OC 55+ Special.",
   },
   {
     label: "Can a Stiltz Homelift be retrofitted into my existing home?",
@@ -308,12 +318,13 @@ const faqItems: AccordionItem[] = [
               />
             </div>
             <div class="absolute bottom-3 left-3">
-              <UBadge
+              <UButton
                 label="Ask About Our OC 55+ Special · Irvine Showroom"
                 color="primary"
                 variant="solid"
-                size="sm"
+                size="xs"
                 icon="i-lucide-sparkles"
+                @click="openConsultation({ ocSpecial: true })"
               />
             </div>
           </div>
@@ -371,7 +382,6 @@ const faqItems: AccordionItem[] = [
           :variant="model.variant"
           :spotlight="model.spotlight"
           :spotlight-color="model.spotlightColor"
-          :to="model.to"
         >
           <template #header>
             <UBadge :label="model.badge" :color="model.badgeColor" variant="subtle" />
@@ -382,7 +392,7 @@ const faqItems: AccordionItem[] = [
               <img
                 :src="model.image"
                 :alt="model.imageAlt"
-                class="aspect-4/3 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                class="aspect-4/3 w-full object-cover transition-transform duration-300 hover:scale-105"
                 loading="lazy"
               />
             </div>
@@ -397,6 +407,17 @@ const faqItems: AccordionItem[] = [
               />
             </div>
           </div>
+
+          <template #footer>
+            <UButton
+              :label="`Get Free ${model.title} Estimate`"
+              color="primary"
+              variant="subtle"
+              trailing-icon="i-lucide-arrow-right"
+              block
+              @click="openConsultation({ product: model.interestValue })"
+            />
+          </template>
         </UPageCard>
       </UPageGrid>
     </UPageSection>
@@ -550,20 +571,20 @@ const faqItems: AccordionItem[] = [
 
             <div class="flex flex-wrap gap-3 pt-2">
               <UButton
-                label="Call 949.235.4536"
-                icon="i-lucide-phone"
+                label="Book Showroom Visit"
+                icon="i-lucide-calendar"
                 color="primary"
                 variant="solid"
                 size="lg"
-                to="tel:+19492354536"
+                @click="openConsultation({ ocSpecial: true })"
               />
               <UButton
-                label="Email Jeff@UpsideLifts.com"
-                icon="i-lucide-mail"
+                label="Call 949.235.4536"
+                icon="i-lucide-phone"
                 color="neutral"
                 variant="outline"
                 size="lg"
-                to="mailto:Jeff@UpsideLifts.com?subject=Showroom%20Appointment%20%2F%20Stiltz%20Homelift%20Inquiry"
+                to="tel:+19492354536"
               />
               <UButton
                 label="Directions"
@@ -595,31 +616,73 @@ const faqItems: AccordionItem[] = [
 
     <USeparator />
 
-    <UPageSection id="contact">
-      <UPageCTA
-        title="Ready to turn your home into a forever home?"
-        description="Call Jeff Cullen directly at 949.235.4536 to book a private appointment at our Irvine showroom or schedule a complimentary in-home consultation."
-        variant="subtle"
-        :links="[
-          {
-            label: 'Call 949.235.4536',
-            to: 'tel:+19492354536',
-            color: 'primary',
-            variant: 'solid',
-            size: 'xl',
-            icon: 'i-lucide-phone',
-          },
-          {
-            label: 'Email Jeff@UpsideLifts.com',
-            to: 'mailto:Jeff@UpsideLifts.com?subject=Upside%20Home%20Lifts%20Consultation%20Request',
-            color: 'neutral',
-            variant: 'subtle',
-            size: 'xl',
-            icon: 'i-lucide-mail',
-            trailingIcon: 'i-lucide-arrow-right',
-          },
-        ]"
-      />
+    <!-- Split-panel Free Consultation Section (101 Mobility + California Mobility inspired) -->
+    <UPageSection id="consultation">
+      <div
+        class="border-default bg-default grid overflow-hidden rounded-2xl border shadow-xl lg:grid-cols-12"
+      >
+        <div
+          class="bg-neutral-100/90 dark:bg-neutral-900/90 flex flex-col justify-between space-y-8 p-8 sm:p-10 lg:col-span-5"
+        >
+          <div class="space-y-4">
+            <UBadge
+              label="Free · No Obligation"
+              color="primary"
+              variant="subtle"
+              size="md"
+              icon="i-lucide-shield-check"
+            />
+
+            <h2 class="text-highlighted text-3xl font-bold tracking-tight sm:text-4xl">
+              Get a Free Consultation
+            </h2>
+
+            <p class="text-muted text-base leading-relaxed">
+              At Upside Home Lifts, we understand that every home and family is unique. That's why
+              we offer a free, no-obligation in-home consultation or private Irvine showroom visit
+              to help you find the right Stiltz Homelift.
+            </p>
+
+            <ul class="space-y-3 pt-2">
+              <li
+                v-for="benefit in consultationBenefits"
+                :key="benefit"
+                class="text-toned flex items-start gap-2.5 text-sm"
+              >
+                <UIcon name="i-lucide-check-circle-2" class="text-primary mt-0.5 size-4 shrink-0" />
+                <span>{{ benefit }}</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="border-default space-y-2 border-t pt-6 text-sm">
+            <p class="text-highlighted font-semibold">Prefer to speak directly with Jeff Cullen?</p>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <a
+                href="tel:+19492354536"
+                class="text-primary inline-flex items-center gap-1.5 font-semibold hover:underline"
+              >
+                <UIcon name="i-lucide-phone" class="size-4" />
+                949.235.4536
+              </a>
+              <a
+                href="mailto:Jeff@UpsideLifts.com"
+                class="text-muted hover:text-highlighted inline-flex items-center gap-1.5"
+              >
+                <UIcon name="i-lucide-mail" class="size-4" />
+                Jeff@UpsideLifts.com
+              </a>
+            </div>
+            <p class="text-muted text-xs">
+              Irvine Showroom: 17155 Von Karman Ave #101, Irvine, CA 92614
+            </p>
+          </div>
+        </div>
+
+        <div class="p-8 sm:p-10 lg:col-span-7">
+          <ConsultationForm />
+        </div>
+      </div>
     </UPageSection>
   </UPage>
 </template>

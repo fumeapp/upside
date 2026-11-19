@@ -3,6 +3,7 @@ import type { FooterColumn, NavigationMenuItem } from "@nuxt/ui";
 
 const route = useRoute();
 const open = ref(false);
+const { openConsultation } = useConsultationModal();
 
 watch(
   () => route.fullPath,
@@ -10,6 +11,11 @@ watch(
     open.value = false;
   },
 );
+
+function handleMobileConsultation() {
+  open.value = false;
+  openConsultation();
+}
 
 const navItems = computed<NavigationMenuItem[]>(() => [
   {
@@ -66,7 +72,7 @@ const footerColumns: FooterColumn[] = [
       { label: "Future-Proof Your Home", to: "/#why-stiltz", active: false },
       { label: "For Architects & Builders", to: "/#process", active: false },
       { label: "Irvine Showroom", to: "/#showroom", active: false },
-      { label: "Homeowner FAQ", to: "/#faq", active: false },
+      { label: "Free Consultation", to: "/#consultation", active: false },
     ],
   },
   {
@@ -105,12 +111,12 @@ const footerColumns: FooterColumn[] = [
         class="hidden xl:inline-flex"
       />
       <UButton
-        label="Book Showroom Visit"
+        label="Get a Free Consultation"
         color="primary"
         variant="solid"
         trailing-icon="i-lucide-arrow-right"
-        to="/#showroom"
         class="hidden lg:inline-flex"
+        @click="openConsultation()"
       />
     </template>
 
@@ -127,12 +133,12 @@ const footerColumns: FooterColumn[] = [
           block
         />
         <UButton
-          label="Book Showroom Visit"
+          label="Get a Free Consultation"
           color="primary"
           variant="solid"
           trailing-icon="i-lucide-arrow-right"
-          to="/#showroom"
           block
+          @click="handleMobileConsultation"
         />
       </div>
     </template>
@@ -141,6 +147,8 @@ const footerColumns: FooterColumn[] = [
   <UMain>
     <slot />
   </UMain>
+
+  <ConsultationModal />
 
   <div class="bg-neutral-700 text-white dark:bg-neutral-900">
     <UContainer class="py-6">

@@ -7,6 +7,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/css/main.css"],
   runtimeConfig: {
+    mail: {
+      from: "upside@fume.bio",
+      to: "Jeff@UpsideLifts.com",
+    },
     public: {
       url: "",
       prefix: "",

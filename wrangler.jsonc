@@ -13,18 +13,34 @@
     "enabled": true,
     "head_sampling_rate": 1,
   },
+  "send_email": [
+    {
+      "name": "SEND_EMAIL",
+      "remote": true,
+    },
+  ],
   "vars": {
     "NUXT_PUBLIC_PREFIX": "upside",
     "NUXT_PUBLIC_URL": "https://upsidelifts.acidjazz.workers.dev",
+    "NUXT_MAIL_FROM": "upside@fume.bio",
+    "NUXT_MAIL_TO": "Jeff@UpsideLifts.com",
   },
   "previews": {
     "observability": {
       "enabled": true,
       "head_sampling_rate": 1,
     },
+    "send_email": [
+      {
+        "name": "SEND_EMAIL",
+        "remote": true,
+      },
+    ],
     "vars": {
       "NUXT_PUBLIC_PREFIX": "upside",
       "NUXT_PUBLIC_URL": "https://upsidelifts.acidjazz.workers.dev",
+      "NUXT_MAIL_FROM": "upside@fume.bio",
+      "NUXT_MAIL_TO": "Jeff@UpsideLifts.com",
     },
   },
 }
