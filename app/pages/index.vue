@@ -8,75 +8,75 @@ import type {
 } from "@nuxt/ui";
 
 useSeoMeta({
-  title: "Shaftless In-Home Elevators",
-  ogTitle: "Upside Lifts — Stay in the home you love. Move effortlessly between floors.",
+  title: "Stiltz Homelifts in Orange County",
+  ogTitle: "Upside Home Lifts — Stiltz Homelifts turns your new home into a forever home.",
   description:
-    "Architectural shaftless residential home elevators that ride on twin self-supporting rails. No shaft, no pit, standard outlet power, and 1–2 day installation.",
+    "Authorized Stiltz Homelifts dealer in Irvine, CA. Shaftless residential elevators with contemporary styling, small footprint, and travel up to 20 feet. Call Jeff Cullen at 949.235.4536.",
   ogDescription:
-    "Discover Upside Duo, Trio, and Vista home lifts—compact, whisper-quiet through-the-floor elevators designed for modern living and aging in place.",
+    "Whether renovating, extending, or building from the ground up, future-proof with confidence with a Stiltz Homelift. Visit our Irvine showroom.",
 });
 
 const heroLinks: ButtonProps[] = [
   {
-    label: "Explore Lift Models",
-    to: "/#models",
+    label: "Call 949.235.4536",
+    to: "tel:+19492354536",
     size: "xl",
     color: "primary",
-    icon: "i-lucide-layers",
+    icon: "i-lucide-phone",
   },
   {
-    label: "Book a Free Home Survey",
-    to: "/#contact",
+    label: "Visit Irvine Showroom",
+    to: "/#showroom",
     size: "xl",
-    color: "secondary",
+    color: "neutral",
     variant: "subtle",
     trailingIcon: "i-lucide-arrow-right",
   },
 ];
 
 const heroHighlights = [
+  { label: "37,000+ Installed", icon: "i-lucide-award" },
+  { label: "Up to 20 ft Travel", icon: "i-lucide-arrow-up-down" },
   { label: "No Shaft or Pit", icon: "i-lucide-columns-2" },
   { label: "1–2 Day Install", icon: "i-lucide-clock" },
-  { label: "Standard Outlet", icon: "i-lucide-plug" },
-  { label: "From 6.8 sq ft", icon: "i-lucide-maximize-2" },
 ];
 
 const whyFeatures: PageFeatureProps[] = [
   {
-    title: "Self-Supporting Dual-Rail Structure",
+    title: "Contemporary Styling & Small Footprint",
     description:
-      "Twin architectural rails carry the entire weight down to the floor—eliminating the need for a structural shaft, pit, or load-bearing walls.",
-    icon: "i-lucide-columns-2",
-  },
-  {
-    title: "Plugs Into a Standard Home Outlet",
-    description:
-      "A whisper-quiet, self-contained electric drive sits cleanly inside the roof of the cabin. No hydraulics, no noisy pumps, and no machine room.",
-    icon: "i-lucide-plug",
-  },
-  {
-    title: "Fits Almost Anywhere",
-    description:
-      "With footprints starting at just 6.8 sq ft, an Upside lift tucks neatly into a hallway corner, stairwell void, bedroom closet, or open living room.",
+      "A neat, discreet solution for moving between floors that blends effortlessly into modern interiors—starting at under 7 square feet with no masonry shaft.",
     icon: "i-lucide-maximize-2",
   },
   {
-    title: "Installed in 1 to 2 Days",
+    title: "Flexible Positioning Almost Anywhere",
     description:
-      "After a clean floor aperture is prepared, our certified technicians assemble and test your lift in days—at a fraction of conventional elevator disruption.",
-    icon: "i-lucide-calendar-check",
+      "Twin self-supporting rails carry the load directly to the floor, allowing placement in hallways, stairwell voids, closets, or open living spaces.",
+    icon: "i-lucide-columns-2",
   },
   {
-    title: "Built-In Safety & Battery Backup",
+    title: "Retrofits, Renovations & New Builds",
     description:
-      "Full top-and-bottom obstruction sensors automatically pause movement if anything touches the cabin, while integrated battery backup lowers you safely during outages.",
+      "Our consultants work directly with you or your architect at any stage of planning or construction—and we can retrofit into existing homes with minimal fuss.",
+    icon: "i-lucide-drafting-compass",
+  },
+  {
+    title: "High Ceilings & Up to 20 Feet of Travel",
+    description:
+      "Double-height rooms, barn conversions, and high-ceilinged Southern California properties are easily handled—our latest Stiltz models travel up to 20 feet.",
+    icon: "i-lucide-arrow-up-down",
+  },
+  {
+    title: "Cost-Effective & Energy Efficient",
+    description:
+      "A whisper-quiet, self-contained electric drive plugs into a standard domestic circuit with no messy hydraulics, machine room, or expensive shaft construction.",
+    icon: "i-lucide-plug",
+  },
+  {
+    title: "Advanced Safety & Fully Guaranteed",
+    description:
+      "Full top-and-bottom obstruction sensors, integrated battery lowering during power outages, and complete Stiltz warranty protection for lasting peace of mind.",
     icon: "i-lucide-shield-check",
-  },
-  {
-    title: "Light-Filled Architectural Design",
-    description:
-      "Clear curved panoramic walls and warm LED canopy lighting preserve natural daylight and sightlines so the lift feels like custom interior architecture.",
-    icon: "i-lucide-sun",
   },
 ];
 
@@ -90,75 +90,75 @@ const liftModels: (PageCardProps & {
 })[] = [
   {
     badge: "01 · Compact 2-Person",
-    badgeColor: "secondary",
-    title: "Upside Duo",
-    description:
-      "Our smallest-footprint residential lift. Engineered to fit effortlessly beside a staircase, inside a closet, or in a quiet living room corner.",
-    image: "/images/home/duo-lift.jpg",
-    imageAlt: "Upside Duo compact 2-person shaftless glass home lift beside a white oak staircase",
-    specs: ["6.8 sq ft footprint", "375 lb capacity", "2 passengers"],
-    variant: "subtle",
-    spotlight: true,
-    spotlightColor: "secondary",
-    to: "/#contact",
-  },
-  {
-    badge: "02 · Wheelchair Accessible",
     badgeColor: "primary",
-    title: "Upside Trio",
+    title: "Stiltz Duo+",
     description:
-      "A wider, flush-entry panoramic cabin with space for a full-sized wheelchair, walker, or up to three passengers—ideal for effortless aging in place.",
-    image: "/images/home/trio-lift.jpg",
-    imageAlt: "Upside Trio spacious wheelchair-accessible panoramic home elevator in a modern room",
-    specs: ["13.6 sq ft footprint", "500 lb capacity", "Zero-threshold entry"],
+      "The smallest-footprint Stiltz Homelift. Fits neatly beside a staircase, inside stacked closets, or in a quiet living room corner without crowding your space.",
+    image: "/images/home/duo-lift.jpg",
+    imageAlt: "Stiltz Duo+ compact 2-person shaftless home lift beside a staircase",
+    specs: ["6.8 sq ft footprint", "375 lb capacity", "Up to 20 ft travel"],
     variant: "subtle",
     spotlight: true,
     spotlightColor: "primary",
-    to: "/#contact",
+    to: "/#showroom",
   },
   {
-    badge: "03 · Panoramic Edition",
+    badge: "02 · Wheelchair Accessible",
     badgeColor: "secondary",
-    title: "Upside Vista",
+    title: "Stiltz Trio+",
     description:
-      "Ultra-clear curved glazing paired with brushed champagne-bronze or deep forest rails—designed to vanish into bright, open-plan interiors.",
-    image: "/images/home/hero-lift.jpg",
-    imageAlt: "Upside Vista clear panoramic glass residential home lift in a sunlit living room",
-    specs: ["360° light flow", "Custom rail finishes", "Warm LED canopy"],
+      "Our spacious 3-person and full-sized wheelchair model with a wide, flush threshold and optional thru-car entry—built for effortless future-proofing.",
+    image: "/images/home/trio-lift.jpg",
+    imageAlt: "Stiltz Trio+ wheelchair-accessible panoramic home elevator in a bright living room",
+    specs: ["13.6 sq ft footprint", "500 lb capacity", "Full wheelchair ready"],
     variant: "subtle",
     spotlight: true,
     spotlightColor: "secondary",
-    to: "/#contact",
+    to: "/#showroom",
+  },
+  {
+    badge: "03 · Clear Panoramic Option",
+    badgeColor: "primary",
+    title: "Stiltz Vista",
+    description:
+      "Crystal-clear curved polycarbonate walls available across Duo+ and Trio+, preserving natural daylight and sightlines in open-plan homes.",
+    image: "/images/home/hero-lift.jpg",
+    imageAlt: "Stiltz Vista clear panoramic home lift in a sunlit living space",
+    specs: ["Clear panoramic body", "Natural light flow", "Whisper-quiet drive"],
+    variant: "subtle",
+    spotlight: true,
+    spotlightColor: "primary",
+    to: "/#showroom",
   },
 ];
 
 const installSteps = [
   {
     step: "Step 01",
-    title: "Free In-Home Survey",
+    title: "Showroom Visit or Home Survey",
     description:
-      "A lift specialist visits your home to evaluate floor joists, ceiling heights, and ideal placement options—with zero obligation.",
+      "Try a working Stiltz Homelift in our Irvine showroom or invite Jeff Cullen for a complimentary in-home assessment.",
     icon: "i-lucide-compass",
   },
   {
     step: "Step 02",
-    title: "Custom Specification",
+    title: "Plan With You or Your Architect",
     description:
-      "Choose your cabin size, glazing style, rail finish, door orientation (including thru-car entry), and interior lighting.",
+      "Whether retrofitting an existing home or designing a new build, we finalize placement, rail finishes, and door configuration.",
     icon: "i-lucide-sliders-horizontal",
   },
   {
     step: "Step 03",
-    title: "Clean 1–2 Day Install",
+    title: "Quick, Clean Installation",
     description:
-      "Once the floor aperture is framed, our team installs the twin rails, cabin, and controls cleanly—leaving your home spotless.",
+      "Once the modest floor aperture is prepared, our certified team installs and tests your lift in 1–2 days with minimal disruption.",
     icon: "i-lucide-wrench",
   },
   {
     step: "Step 04",
-    title: "Walkthrough & Warranty",
+    title: "Fully Guaranteed Support",
     description:
-      "We test every safety sensor with you, walk through controls and remote fobs, and back your lift with comprehensive support.",
+      "Every Stiltz Homelift includes a full walkthrough, safety check, and local Orange County warranty and maintenance support.",
     icon: "i-lucide-badge-check",
   },
 ];
@@ -172,16 +172,16 @@ interface SpecRow {
 
 const specColumns: TableColumn<SpecRow>[] = [
   { accessorKey: "feature", header: "Specification" },
-  { accessorKey: "duo", header: "Upside Duo" },
-  { accessorKey: "vista", header: "Upside Vista" },
-  { accessorKey: "trio", header: "Upside Trio" },
+  { accessorKey: "duo", header: "Stiltz Duo+" },
+  { accessorKey: "vista", header: "Stiltz Vista" },
+  { accessorKey: "trio", header: "Stiltz Trio+" },
 ];
 
 const specRows: SpecRow[] = [
   {
     feature: "Footprint",
     duo: "6.8 sq ft (31.5″ × 41″)",
-    vista: "6.8 – 13.6 sq ft",
+    vista: "Available on Duo+ & Trio+",
     trio: "13.6 sq ft (41.5″ × 52.5″)",
   },
   {
@@ -193,14 +193,14 @@ const specRows: SpecRow[] = [
   {
     feature: "Wheelchair / Walker Ready",
     duo: "Compact walker",
-    vista: "Available on Trio Vista",
+    vista: "Full wheelchair on Trio Vista",
     trio: "Full-size standard wheelchair",
   },
   {
     feature: "Max Travel Height",
-    duo: "Up to 15 ft (2 floors)",
-    vista: "Up to 15 ft (2 floors)",
-    trio: "Up to 15 ft (2 floors)",
+    duo: "Up to 20 ft (high ceilings OK)",
+    vista: "Up to 20 ft (high ceilings OK)",
+    trio: "Up to 20 ft (high ceilings OK)",
   },
   {
     feature: "Drive & Power",
@@ -209,43 +209,54 @@ const specRows: SpecRow[] = [
     trio: "Quiet self-contained electric · 220V",
   },
   {
-    feature: "Typical Installation",
+    feature: "Typical Lift Install",
     duo: "1–2 days",
     vista: "1–2 days",
     trio: "1–2 days",
   },
 ];
 
+const adChecklist = [
+  "Contemporary styling",
+  "Flexible positioning",
+  "Small footprint",
+  "Cost-effective",
+  "Energy efficient",
+  "Suitable for future-proofing",
+  "Advanced safety features",
+  "Fully guaranteed",
+];
+
 const faqItems: AccordionItem[] = [
   {
-    label: "How much space does an Upside home lift require?",
-    icon: "i-lucide-maximize-2",
+    label: "Can I see and ride a Stiltz Homelift before buying?",
+    icon: "i-lucide-map-pin",
     content:
-      "Our compact Upside Duo takes up roughly 6.8 square feet—about the size of a living room armchair. Because there is no shaft or machine room, it can be placed in a hallway, beside an existing staircase, inside stacked closets, or directly in an open room.",
+      "Yes! Upside Home Lifts operates a dedicated showroom in Irvine at 17155 Von Karman Ave #101. Call Jeff Cullen at 949.235.4536 to book a private appointment and ask about our OC 55+ Special.",
   },
   {
-    label: "Do I need load-bearing walls or a concrete pit?",
-    icon: "i-lucide-columns-2",
+    label: "Can a Stiltz Homelift be retrofitted into my existing home?",
+    icon: "i-lucide-home",
     content:
-      "No. Upside lifts run on a patented self-supporting dual-rail system that transfers the entire structural load straight down into the ground floor. No masonry shaft, no pit excavation, and no separate machine room are needed.",
+      "Absolutely. Because Stiltz uses a self-supporting dual-rail system with no masonry shaft or pit, we regularly retrofit lifts into existing homes as well as collaborating with architects during renovations, extensions, and new builds.",
+  },
+  {
+    label: "Does it work with high ceilings or double-height rooms?",
+    icon: "i-lucide-arrow-up-down",
+    content:
+      "Yes. Our latest Stiltz Homelifts travel up to 20 feet, making them ideal for high-ceilinged California homes, loft spaces, double-height rooms, and custom conversions.",
   },
   {
     label: "What happens if the power goes out while I'm inside?",
     icon: "i-lucide-battery-charging",
     content:
-      "Every Upside lift includes an integrated battery backup system. If your home loses power mid-trip, the lift smoothly and safely lowers you to the ground floor, keeps cabin lighting illuminated, and allows the door to open normally.",
-  },
-  {
-    label: "How long does installation take?",
-    icon: "i-lucide-clock",
-    content:
-      "After the modest floor aperture is prepared and framed (typically 1–2 days of light carpentry), the lift itself is assembled, calibrated, and safety-tested in just 1 to 2 days—compared to weeks of construction for a traditional shaft elevator.",
+      "Every Stiltz Homelift includes built-in battery backup. If power is interrupted mid-trip, the lift smoothly lowers you to the ground floor with interior lighting on so you can exit safely.",
   },
   {
     label: "How does safety work when traveling through the ceiling?",
     icon: "i-lucide-shield-check",
     content:
-      "When the lift travels downstairs, an automatic matching floor panel (lid) smoothly closes the upper aperture so you can walk right over it. Full-surface top and bottom sensors immediately stop the lift if a pet, child, or object touches the cabin or ceiling opening.",
+      "When the lift is downstairs, a matching floor lid automatically closes the upper ceiling opening so you can walk across it normally. Full-surface obstruction sensors above and below the cabin stop the lift instantly if anything is in its path.",
   },
 ];
 </script>
@@ -253,8 +264,8 @@ const faqItems: AccordionItem[] = [
 <template>
   <UPage>
     <UPageHero
-      headline="Shaftless Residential Home Lifts"
-      description="Thoughtfully designed through-the-floor home elevators that glide on twin self-supporting rails—no shaft, no pit, standard power, and installed in as little as 1 to 2 days."
+      headline="Authorized Stiltz Homelifts Dealer · Orange County, CA"
+      description="Whether renovating, extending, or building from the ground up, future-proof with confidence. Installed cleanly in existing homes or new builds by Upside Home Lifts—with models traveling up to 20 feet."
       orientation="horizontal"
       :links="heroLinks"
       :ui="{
@@ -267,8 +278,8 @@ const faqItems: AccordionItem[] = [
       </template>
 
       <template #title>
-        Stay in the home you love. Move <span class="text-primary">effortlessly</span> between
-        floors.
+        Stiltz Homelifts turns your home into a
+        <span class="text-primary">forever home</span>.
       </template>
 
       <UPageCard
@@ -283,16 +294,26 @@ const faqItems: AccordionItem[] = [
           <div class="relative overflow-hidden rounded-lg">
             <img
               src="/images/home/hero-lift.jpg"
-              alt="Upside shaftless panoramic glass home elevator in a sunlit contemporary living room"
+              alt="Stiltz shaftless panoramic home lift installed by Upside Home Lifts"
               class="aspect-4/3 w-full object-cover"
               loading="eager"
             />
             <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
               <UBadge
-                label="Upside Vista · Dual-Rail"
+                label="Over 37,000 Homelifts Installed"
                 color="secondary"
                 variant="solid"
                 size="sm"
+                icon="i-lucide-award"
+              />
+            </div>
+            <div class="absolute bottom-3 left-3">
+              <UBadge
+                label="Ask About Our OC 55+ Special · Irvine Showroom"
+                color="primary"
+                variant="solid"
+                size="sm"
+                icon="i-lucide-sparkles"
               />
             </div>
           </div>
@@ -301,7 +322,7 @@ const faqItems: AccordionItem[] = [
             <div
               v-for="item in heroHighlights"
               :key="item.label"
-              class="border-default bg-default/75 flex items-center gap-1.5 rounded-md border px-2.5 py-2"
+              class="border-default bg-default/80 flex items-center gap-1.5 rounded-md border px-2.5 py-2"
             >
               <UIcon :name="item.icon" class="text-primary size-3.5 shrink-0" />
               <span class="text-highlighted truncate text-[11px] font-medium">
@@ -314,20 +335,32 @@ const faqItems: AccordionItem[] = [
     </UPageHero>
 
     <UPageSection
-      id="why-upside"
-      headline="Why Upside Lifts"
-      title="An elevator that fits your architecture—not the other way around."
-      description="Traditional home elevators demand shafts, pits, hydraulics, and months of renovation. Upside delivers quiet, architectural vertical mobility without tearing up your home."
+      id="why-stiltz"
+      headline="Future-Proof With Confidence"
+      title="A neat, discreet solution for moving between floors."
+      description="Stiltz locks in future benefits and helps you embrace a new way of living—positioned almost anywhere and installed quickly with a minimum of fuss."
       :features="whyFeatures"
-    />
+    >
+      <div class="mx-auto mt-2 flex max-w-4xl flex-wrap justify-center gap-2">
+        <UBadge
+          v-for="point in adChecklist"
+          :key="point"
+          :label="point"
+          color="primary"
+          variant="subtle"
+          size="md"
+          icon="i-lucide-check"
+        />
+      </div>
+    </UPageSection>
 
     <USeparator />
 
     <UPageSection
       id="models"
-      headline="The Collection"
+      headline="The Stiltz Homelifts Lineup"
       title="Three thoughtfully proportioned home lifts"
-      description="Whether you want the smallest footprint possible or full wheelchair accessibility, every Upside model blends cleanly into your living space."
+      description="From our ultra-compact 2-person Duo+ to the full wheelchair-accessible Trio+ and clear Vista edition—all engineered to travel up to 20 feet."
     >
       <UPageGrid>
         <UPageCard
@@ -373,8 +406,8 @@ const faqItems: AccordionItem[] = [
     <UPageSection
       id="process"
       headline="From First Visit to First Ride"
-      title="A remarkably simple 4-step installation"
-      description="We handle structural evaluation, finish selection, clean installation, and final walkthrough so upgrading your home feels effortless."
+      title="Simple planning for homeowners & architects"
+      description="Our consultants work with you or your architect at any stage of planning, renovation, or construction—handling retrofits and new builds with equal ease."
     >
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <UPageCard
@@ -397,8 +430,8 @@ const faqItems: AccordionItem[] = [
     <UPageSection
       id="specs"
       headline="Compare Specifications"
-      title="Built for everyday comfort and lasting peace of mind"
-      description="Compare footprint, capacity, and accessibility across the Upside lineup."
+      title="Engineered for comfort, accessibility, and high ceilings"
+      description="Compare footprint, capacity, travel height, and accessibility across the Stiltz lineup."
     >
       <UPageCard variant="subtle" :ui="{ container: 'p-0 sm:p-2' }">
         <UTable :data="specRows" :columns="specColumns" class="w-full" />
@@ -408,10 +441,152 @@ const faqItems: AccordionItem[] = [
     <USeparator />
 
     <UPageSection
+      id="showroom"
+      headline="Orange County Showroom"
+      title="Experience a Stiltz Homelift in person in Irvine"
+      description="Call for a private showroom appointment—and be sure to ask about our OC 55+ Special."
+    >
+      <div class="grid gap-6 lg:grid-cols-5">
+        <!-- Business-card styled personal contact card for Jeff Cullen -->
+        <div
+          class="bg-neutral-600 dark:bg-neutral-800 relative flex flex-col justify-between overflow-hidden rounded-2xl p-8 text-white shadow-lg lg:col-span-2"
+        >
+          <div
+            class="pointer-events-none absolute top-0 right-0 h-full w-10 bg-linear-to-b from-white/15 via-white/5 to-white/20"
+          />
+          <div class="space-y-6">
+            <Logo inverted />
+
+            <div class="border-b border-white/40 pb-3">
+              <p class="text-2xl font-bold tracking-tight italic">Jeff Cullen</p>
+              <p class="mt-0.5 text-sm font-light tracking-wide text-neutral-200">Owner</p>
+            </div>
+          </div>
+
+          <div class="mt-8 space-y-2.5 text-sm">
+            <a
+              href="tel:+19492354536"
+              class="flex items-center gap-2.5 font-medium text-white hover:underline"
+            >
+              <UIcon name="i-lucide-phone" class="text-primary-300 size-4 shrink-0" />
+              949.235.4536
+            </a>
+            <a
+              href="mailto:Jeff@UpsideLifts.com"
+              class="flex items-center gap-2.5 text-neutral-100 hover:underline"
+            >
+              <UIcon name="i-lucide-mail" class="text-primary-300 size-4 shrink-0" />
+              Jeff@UpsideLifts.com
+            </a>
+            <a
+              href="https://maps.google.com/?q=17155+Von+Karman+Ave+%23101,+Irvine,+CA+92614"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-start gap-2.5 text-neutral-100 hover:underline"
+            >
+              <UIcon name="i-lucide-map-pin" class="text-primary-300 mt-0.5 size-4 shrink-0" />
+              <span>
+                17155 Von Karman Ave #101<br />
+                Irvine, CA 92614
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Showroom details & OC 55+ Special card -->
+        <UPageCard variant="subtle" class="lg:col-span-3">
+          <div class="flex h-full flex-col justify-between space-y-6">
+            <div class="space-y-4">
+              <div class="flex flex-wrap items-center gap-2">
+                <UBadge
+                  label="OC 55+ Special Available"
+                  color="primary"
+                  variant="solid"
+                  size="md"
+                  icon="i-lucide-sparkles"
+                />
+                <UBadge
+                  label="By Appointment"
+                  color="secondary"
+                  variant="subtle"
+                  size="md"
+                  icon="i-lucide-calendar"
+                />
+              </div>
+
+              <h3 class="text-highlighted text-2xl font-bold tracking-tight">
+                Test-ride a Stiltz Homelift at our Irvine showroom
+              </h3>
+
+              <p class="text-muted leading-relaxed">
+                See the whisper-quiet dual-rail drive, crystal-clear panoramic glazing, and
+                full-perimeter safety sensors up close. Bring your floor plans or photos—Jeff will
+                walk you through placement options, pricing, and installation timelines with zero
+                pressure.
+              </p>
+
+              <div class="grid gap-3 pt-1 sm:grid-cols-2">
+                <div class="border-default bg-default/70 rounded-lg border p-3.5">
+                  <p class="text-highlighted flex items-center gap-2 text-sm font-semibold">
+                    <UIcon name="i-lucide-home" class="text-primary size-4" />
+                    Free In-Home Assessment
+                  </p>
+                  <p class="text-muted mt-1 text-xs leading-relaxed">
+                    Serving Irvine, Newport Beach, Laguna Woods, Mission Viejo, and all of Orange
+                    County.
+                  </p>
+                </div>
+                <div class="border-default bg-default/70 rounded-lg border p-3.5">
+                  <p class="text-highlighted flex items-center gap-2 text-sm font-semibold">
+                    <UIcon name="i-lucide-drafting-compass" class="text-primary size-4" />
+                    Architect & Builder Ready
+                  </p>
+                  <p class="text-muted mt-1 text-xs leading-relaxed">
+                    CAD specs and on-site coordination for remodels, extensions, and custom builds.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3 pt-2">
+              <UButton
+                label="Call 949.235.4536"
+                icon="i-lucide-phone"
+                color="primary"
+                variant="solid"
+                size="lg"
+                to="tel:+19492354536"
+              />
+              <UButton
+                label="Email Jeff@UpsideLifts.com"
+                icon="i-lucide-mail"
+                color="neutral"
+                variant="outline"
+                size="lg"
+                to="mailto:Jeff@UpsideLifts.com?subject=Showroom%20Appointment%20%2F%20Stiltz%20Homelift%20Inquiry"
+              />
+              <UButton
+                label="Directions"
+                icon="i-lucide-navigation"
+                color="neutral"
+                variant="ghost"
+                size="lg"
+                to="https://maps.google.com/?q=17155+Von+Karman+Ave+%23101,+Irvine,+CA+92614"
+                target="_blank"
+              />
+            </div>
+          </div>
+        </UPageCard>
+      </div>
+    </UPageSection>
+
+    <USeparator />
+
+    <UPageSection
       id="faq"
       headline="Common Questions"
-      title="Everything homeowners ask before installing a lift"
-      description="Straightforward answers about space requirements, power outages, safety sensors, and installation timelines."
+      title="Everything homeowners ask before installing a Stiltz lift"
+      description="Straightforward answers about showroom visits, retrofits, high ceilings, power outages, and safety."
     >
       <div class="mx-auto w-full max-w-3xl">
         <UAccordion :items="faqItems" />
@@ -422,25 +597,25 @@ const faqItems: AccordionItem[] = [
 
     <UPageSection id="contact">
       <UPageCTA
-        title="Ready to see where an Upside lift fits in your home?"
-        description="Schedule a complimentary, no-obligation in-home survey or request our digital lookbook and pricing guide."
+        title="Ready to turn your home into a forever home?"
+        description="Call Jeff Cullen directly at 949.235.4536 to book a private appointment at our Irvine showroom or schedule a complimentary in-home consultation."
         variant="subtle"
         :links="[
           {
-            label: 'Schedule a Free Home Survey',
-            to: 'mailto:hello@upsidelifts.com?subject=Free%20In-Home%20Lift%20Survey',
+            label: 'Call 949.235.4536',
+            to: 'tel:+19492354536',
             color: 'primary',
             variant: 'solid',
             size: 'xl',
-            icon: 'i-lucide-calendar',
+            icon: 'i-lucide-phone',
           },
           {
-            label: 'Request Brochure & Pricing',
-            to: 'mailto:hello@upsidelifts.com?subject=Upside%20Lifts%20Brochure%20%26%20Pricing',
-            color: 'secondary',
+            label: 'Email Jeff@UpsideLifts.com',
+            to: 'mailto:Jeff@UpsideLifts.com?subject=Upside%20Home%20Lifts%20Consultation%20Request',
+            color: 'neutral',
             variant: 'subtle',
             size: 'xl',
-            icon: 'i-lucide-book-open',
+            icon: 'i-lucide-mail',
             trailingIcon: 'i-lucide-arrow-right',
           },
         ]"

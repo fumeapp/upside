@@ -1,12 +1,12 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: "amber",
-      secondary: "green",
-      neutral: "stone",
+      primary: "green",
+      secondary: "amber",
+      neutral: "slate",
     },
   },
   seo: {
-    siteName: "Upside Lifts",
+    siteName: "Upside Home Lifts",
   },
 });

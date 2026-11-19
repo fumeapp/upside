@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const colorMode = useColorMode();
-const color = computed(() => (colorMode.value === "dark" ? "#1c1917" : "#fafaf9"));
+const color = computed(() => (colorMode.value === "dark" ? "#181d22" : "#f6f7f8"));
 
 useHead({
   meta: [
@@ -16,7 +16,9 @@ useHead({
 
 useSeoMeta({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} — Upside Lifts` : "Upside Lifts";
+    return titleChunk
+      ? `${titleChunk} — Upside Home Lifts`
+      : "Upside Home Lifts — Authorized Stiltz Homelifts Dealer in Orange County";
   },
 });
 </script>
@@ -26,13 +28,13 @@ useSeoMeta({
     color="
       repeating-linear-gradient(
         to right,
-        var(--ui-color-secondary-500) 0%,
-        var(--ui-color-primary-500) 50%,
-        var(--ui-color-secondary-700) 100%
+        var(--ui-color-primary-500) 0%,
+        var(--ui-color-secondary-500) 50%,
+        var(--ui-color-primary-600) 100%
       )
     "
   />
-  <UApp class="overlay bg-neutral-100 dark:bg-neutral-950 min-h-screen">
+  <UApp class="overlay bg-neutral-50 dark:bg-neutral-950 min-h-screen">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

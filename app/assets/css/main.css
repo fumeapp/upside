@@ -2,31 +2,44 @@
 @import "@nuxt/ui";
 
 @theme static {
-  /* Warm architectural terracotta & brushed bronze primary scale */
-  --color-amber-50: #fcf7f2;
-  --color-amber-100: #f7ebdf;
-  --color-amber-200: #eed5bd;
-  --color-amber-300: #e2b891;
-  --color-amber-400: #d59563;
-  --color-amber-500: #c47943;
-  --color-amber-600: #ad6133;
-  --color-amber-700: #8e4c2b;
-  --color-amber-800: #733e27;
-  --color-amber-900: #5e3422;
-  --color-amber-950: #331910;
+  /* Stiltz Homelifts signature architectural leaf green (primary) */
+  --color-green-50: #f6faed;
+  --color-green-100: #eaf4d7;
+  --color-green-200: #d5e8b3;
+  --color-green-300: #b8d883;
+  --color-green-400: #99c457;
+  --color-green-500: #789e33;
+  --color-green-600: #618227;
+  --color-green-700: #4c6620;
+  --color-green-800: #3e521e;
+  --color-green-900: #34451d;
+  --color-green-950: #1a250b;
 
-  /* Architectural forest pine & sage secondary scale */
-  --color-green-50: #f2f6f3;
-  --color-green-100: #e0eae3;
-  --color-green-200: #c2d5c8;
-  --color-green-300: #99b8a4;
-  --color-green-400: #6d957d;
-  --color-green-500: #4c765f;
-  --color-green-600: #395d4a;
-  --color-green-700: #2e4b3c;
-  --color-green-800: #263d31;
-  --color-green-900: #203329;
-  --color-green-950: #111d17;
+  /* Warm golden-ochre highlight matching ad milestone badge (secondary) */
+  --color-amber-50: #fdfaf0;
+  --color-amber-100: #faf2d4;
+  --color-amber-200: #f4e1a6;
+  --color-amber-300: #edc96f;
+  --color-amber-400: #e7b543;
+  --color-amber-500: #dfa324;
+  --color-amber-600: #c48418;
+  --color-amber-700: #a16415;
+  --color-amber-800: #844f18;
+  --color-amber-900: #6d4117;
+  --color-amber-950: #3e2209;
+
+  /* Cool architectural slate matching Upside Home Lifts business card */
+  --color-slate-50: #f6f7f8;
+  --color-slate-100: #eceff1;
+  --color-slate-200: #d7dde1;
+  --color-slate-300: #b6c0c7;
+  --color-slate-400: #8e9ba5;
+  --color-slate-500: #6d7a85;
+  --color-slate-600: #5a6670;
+  --color-slate-700: #49535c;
+  --color-slate-800: #3d454d;
+  --color-slate-900: #2b3238;
+  --color-slate-950: #181d22;
 
   --color-primary-50: var(--ui-color-primary-50);
   --color-primary-100: var(--ui-color-primary-100);
@@ -58,10 +71,10 @@ html {
 }
 
 .dark {
-  --ui-bg: var(--ui-color-neutral-900);
-  --ui-bg-muted: var(--ui-color-neutral-800);
-  --ui-bg-elevated: var(--ui-color-neutral-800);
-  --ui-bg-accented: var(--ui-color-neutral-700);
+  --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg-muted: var(--ui-color-neutral-900);
+  --ui-bg-elevated: var(--ui-color-neutral-900);
+  --ui-bg-accented: var(--ui-color-neutral-800);
 }
 
 .flex-center {
