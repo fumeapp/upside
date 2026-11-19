@@ -1,0 +1,30 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "upsidelifts",
+  "main": "./.output/server/index.mjs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./.output/public/",
+    "binding": "ASSETS",
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+  },
+  "vars": {
+    "NUXT_PUBLIC_PREFIX": "upside",
+    "NUXT_PUBLIC_URL": "https://upsidelifts.acidjazz.workers.dev",
+  },
+  "previews": {
+    "observability": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+    },
+    "vars": {
+      "NUXT_PUBLIC_PREFIX": "upside",
+      "NUXT_PUBLIC_URL": "https://upsidelifts.acidjazz.workers.dev",
+    },
+  },
+}

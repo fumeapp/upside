@@ -1,0 +1,46 @@
+{
+  "name": "upsidelifts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "NODE_OPTIONS='--max-old-space-size=8192' nuxt build",
+    "dev": "nuxt dev",
+    "dev:public": "nuxt dev --public",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "deploy": "npx wrangler deploy",
+    "deploy:preview": "npx wrangler preview",
+    "postinstall": "nuxt prepare",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "lint:action": "oxlint -f github",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.11.0",
+    "@vueuse/core": "^14.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260823.1",
+    "@iconify-json/lucide": "^1.2.150",
+    "@nuxt/devtools": "^3.4.2",
+    "nuxt": "^4.5.2",
+    "oxfmt": "^0.64.0",
+    "oxlint": "^1.79.0",
+    "vitest": "^4.1.11",
+    "wrangler": "^4.156.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@tailwindcss/oxide",
+      "esbuild",
+      "sharp",
+      "unrs-resolver",
+      "vue-demi",
+      "workerd"
+    ]
+  }
+}
