@@ -572,15 +572,16 @@ const faqItems: AccordionItem[] = [
         <div
           class="bg-neutral-600 dark:bg-neutral-800 relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 text-white shadow-lg sm:p-8 lg:col-span-2"
         >
-          <div
-            class="pointer-events-none absolute top-0 right-0 h-full w-10 bg-linear-to-b from-white/15 via-white/5 to-white/20"
-          />
           <div class="space-y-6">
             <Logo inverted />
 
-            <div class="border-b border-white/40 pb-3">
-              <p class="text-2xl font-bold tracking-tight italic">Jeff Cullen</p>
-              <p class="mt-0.5 text-sm font-light tracking-wide text-neutral-200">Owner</p>
+            <div>
+              <p
+                class="inline-block border-b-2 border-white/80 pb-1.5 text-2xl font-bold tracking-tight italic"
+              >
+                Jeff Cullen
+              </p>
+              <p class="mt-2 text-sm font-light tracking-wide text-neutral-200">Owner</p>
             </div>
           </div>
 
