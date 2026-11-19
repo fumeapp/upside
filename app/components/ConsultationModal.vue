@@ -14,13 +14,15 @@ const trustChecks = [
     title="Get Your Free Consultation"
     description="No obligation. Speak directly with Jeff Cullen, Owner of Upside Home Lifts in Orange County."
     :ui="{
-      content: 'sm:max-w-xl',
+      content: 'w-[calc(100vw-1.5rem)] sm:max-w-xl max-h-[90dvh]',
+      header: 'p-4 sm:px-6 sm:py-5',
+      body: 'overflow-y-auto p-4 sm:p-6',
     }"
   >
     <template #body>
-      <div class="space-y-5">
+      <div class="space-y-4 sm:space-y-5">
         <div
-          class="border-default bg-elevated/60 flex flex-wrap items-center gap-x-4 gap-y-1.5 rounded-lg border px-3.5 py-2.5 text-xs font-medium"
+          class="border-default bg-elevated/60 flex flex-wrap items-center gap-x-4 gap-y-1.5 rounded-lg border px-3 py-2 text-xs font-medium sm:px-3.5 sm:py-2.5"
         >
           <span
             v-for="item in trustChecks"

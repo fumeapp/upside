@@ -34,7 +34,7 @@ useSeoMeta({
       )
     "
   />
-  <UApp class="overlay bg-neutral-50 dark:bg-neutral-950 min-h-screen">
+  <UApp class="overlay bg-neutral-50 dark:bg-neutral-950 min-h-screen overflow-x-clip">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

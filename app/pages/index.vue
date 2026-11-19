@@ -194,7 +194,7 @@ const specRows: SpecRow[] = [
     trio: "500 lbs (3 people / wheelchair)",
   },
   {
-    feature: "Wheelchair / Walker Ready",
+    feature: "Wheelchair / Walker",
     duo: "Compact walker",
     vista: "Full wheelchair on Trio Vista",
     trio: "Full-size standard wheelchair",
@@ -207,15 +207,45 @@ const specRows: SpecRow[] = [
   },
   {
     feature: "Drive & Power",
-    duo: "Quiet self-contained electric · 220V",
-    vista: "Quiet self-contained electric · 220V",
-    trio: "Quiet self-contained electric · 220V",
+    duo: "Quiet self-contained · 220V",
+    vista: "Quiet self-contained · 220V",
+    trio: "Quiet self-contained · 220V",
   },
   {
     feature: "Typical Lift Install",
     duo: "1–2 days",
     vista: "1–2 days",
     trio: "1–2 days",
+  },
+];
+
+const mobileSpecModels: {
+  name: string;
+  badge: string;
+  badgeColor: "primary" | "secondary";
+  key: "duo" | "vista" | "trio";
+  interestValue: LiftInterest;
+}[] = [
+  {
+    name: "Stiltz Duo+",
+    badge: "Compact 2-Person",
+    badgeColor: "primary",
+    key: "duo",
+    interestValue: "Stiltz Duo+ (Compact 2-Person)",
+  },
+  {
+    name: "Stiltz Trio+",
+    badge: "Wheelchair Accessible",
+    badgeColor: "secondary",
+    key: "trio",
+    interestValue: "Stiltz Trio+ (Wheelchair Accessible)",
+  },
+  {
+    name: "Stiltz Vista",
+    badge: "Clear Panoramic",
+    badgeColor: "primary",
+    key: "vista",
+    interestValue: "Stiltz Vista (Clear Panoramic)",
   },
 ];
 
@@ -279,8 +309,9 @@ const faqItems: AccordionItem[] = [
       orientation="horizontal"
       :links="heroLinks"
       :ui="{
-        container: 'min-w-0',
+        container: 'min-w-0 py-12 sm:py-16 lg:py-24',
         wrapper: 'min-w-0',
+        title: 'text-4xl sm:text-5xl lg:text-5xl xl:text-6xl',
       }"
     >
       <template #top>
@@ -308,7 +339,7 @@ const faqItems: AccordionItem[] = [
               class="aspect-4/3 w-full object-cover"
               loading="eager"
             />
-            <div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+            <div class="absolute top-2.5 left-2.5 right-2.5 flex flex-wrap gap-1.5 sm:top-3 sm:left-3">
               <UBadge
                 label="Over 37,000 Homelifts Installed"
                 color="secondary"
@@ -317,26 +348,27 @@ const faqItems: AccordionItem[] = [
                 icon="i-lucide-award"
               />
             </div>
-            <div class="absolute bottom-3 left-3">
+            <div class="absolute right-2.5 bottom-2.5 left-2.5 sm:right-auto sm:bottom-3 sm:left-3">
               <UButton
-                label="Ask About Our OC 55+ Special · Irvine Showroom"
+                label="OC 55+ Special · Irvine Showroom"
                 color="primary"
                 variant="solid"
                 size="xs"
                 icon="i-lucide-sparkles"
+                class="max-w-full"
                 @click="openConsultation({ ocSpecial: true })"
               />
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-2 sm:grid-cols-4">
+          <div class="grid grid-cols-2 gap-2">
             <div
               v-for="item in heroHighlights"
               :key="item.label"
-              class="border-default bg-default/80 flex items-center gap-1.5 rounded-md border px-2.5 py-2"
+              class="border-default bg-default/80 flex min-w-0 items-center gap-2 rounded-md border px-2.5 py-2"
             >
-              <UIcon :name="item.icon" class="text-primary size-3.5 shrink-0" />
-              <span class="text-highlighted truncate text-[11px] font-medium">
+              <UIcon :name="item.icon" class="text-primary size-4 shrink-0" />
+              <span class="text-highlighted truncate text-xs font-medium">
                 {{ item.label }}
               </span>
             </div>
@@ -377,47 +409,60 @@ const faqItems: AccordionItem[] = [
         <UPageCard
           v-for="model in liftModels"
           :key="model.title"
-          :title="model.title"
-          :description="model.description"
           :variant="model.variant"
           :spotlight="model.spotlight"
           :spotlight-color="model.spotlightColor"
+          :ui="{
+            container: 'h-full',
+            wrapper: 'h-full items-stretch',
+          }"
         >
-          <template #header>
-            <UBadge :label="model.badge" :color="model.badgeColor" variant="subtle" />
-          </template>
+          <div class="flex h-full flex-col justify-between gap-4">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between gap-2">
+                <UBadge :label="model.badge" :color="model.badgeColor" variant="subtle" />
+              </div>
 
-          <div class="mt-2 space-y-3">
-            <div class="overflow-hidden rounded-lg">
-              <img
-                :src="model.image"
-                :alt="model.imageAlt"
-                class="aspect-4/3 w-full object-cover transition-transform duration-300 hover:scale-105"
-                loading="lazy"
-              />
-            </div>
-            <div class="flex flex-wrap gap-1.5">
-              <UBadge
-                v-for="spec in model.specs"
-                :key="spec"
-                :label="spec"
-                color="neutral"
-                variant="outline"
-                size="sm"
-              />
-            </div>
-          </div>
+              <div class="overflow-hidden rounded-lg">
+                <img
+                  :src="model.image"
+                  :alt="model.imageAlt"
+                  class="aspect-4/3 w-full object-cover transition-transform duration-300 hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
 
-          <template #footer>
+              <div class="space-y-1.5">
+                <h3 class="text-highlighted text-lg font-bold tracking-tight">
+                  {{ model.title }}
+                </h3>
+                <p class="text-muted text-sm leading-relaxed">
+                  {{ model.description }}
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-1.5 pt-0.5">
+                <UBadge
+                  v-for="spec in model.specs"
+                  :key="spec"
+                  :label="spec"
+                  color="neutral"
+                  variant="outline"
+                  size="sm"
+                />
+              </div>
+            </div>
+
             <UButton
               :label="`Get Free ${model.title} Estimate`"
               color="primary"
               variant="subtle"
+              size="md"
               trailing-icon="i-lucide-arrow-right"
               block
               @click="openConsultation({ product: model.interestValue })"
             />
-          </template>
+          </div>
         </UPageCard>
       </UPageGrid>
     </UPageSection>
@@ -454,8 +499,63 @@ const faqItems: AccordionItem[] = [
       title="Engineered for comfort, accessibility, and high ceilings"
       description="Compare footprint, capacity, travel height, and accessibility across the Stiltz lineup."
     >
-      <UPageCard variant="subtle" :ui="{ container: 'p-0 sm:p-2' }">
-        <UTable :data="specRows" :columns="specColumns" class="w-full" />
+      <!-- Stacked cards on mobile & portrait tablet (< lg) so there is zero horizontal overflow -->
+      <div class="grid gap-4 md:grid-cols-2 lg:hidden">
+        <UPageCard
+          v-for="model in mobileSpecModels"
+          :key="model.name"
+          variant="subtle"
+          :class="model.key === 'vista' ? 'md:col-span-2' : ''"
+        >
+          <div class="space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <h3 class="text-highlighted text-lg font-bold tracking-tight">{{ model.name }}</h3>
+              <UBadge :label="model.badge" :color="model.badgeColor" variant="subtle" size="sm" />
+            </div>
+
+            <dl class="divide-default divide-y text-sm">
+              <div
+                v-for="row in specRows"
+                :key="row.feature"
+                class="flex items-baseline justify-between gap-4 py-2.5"
+              >
+                <dt class="text-muted shrink-0 font-medium">{{ row.feature }}</dt>
+                <dd class="text-highlighted text-right font-medium">{{ row[model.key] }}</dd>
+              </div>
+            </dl>
+
+            <UButton
+              :label="`Request ${model.name} Info`"
+              color="primary"
+              variant="subtle"
+              trailing-icon="i-lucide-arrow-right"
+              block
+              @click="openConsultation({ product: model.interestValue })"
+            />
+          </div>
+        </UPageCard>
+      </div>
+
+      <!-- Full comparison table on desktop / landscape tablet (>= lg) with clean wrapping -->
+      <UPageCard
+        variant="subtle"
+        class="hidden overflow-hidden lg:block"
+        :ui="{
+          container: 'min-w-0 p-2',
+          wrapper: 'min-w-0 w-full',
+        }"
+      >
+        <div class="w-full min-w-0 overflow-x-auto">
+          <UTable
+            :data="specRows"
+            :columns="specColumns"
+            class="w-full"
+            :ui="{
+              th: 'whitespace-normal',
+              td: 'whitespace-normal',
+            }"
+          />
+        </div>
       </UPageCard>
     </UPageSection>
 
@@ -470,7 +570,7 @@ const faqItems: AccordionItem[] = [
       <div class="grid gap-6 lg:grid-cols-5">
         <!-- Business-card styled personal contact card for Jeff Cullen -->
         <div
-          class="bg-neutral-600 dark:bg-neutral-800 relative flex flex-col justify-between overflow-hidden rounded-2xl p-8 text-white shadow-lg lg:col-span-2"
+          class="bg-neutral-600 dark:bg-neutral-800 relative flex flex-col justify-between overflow-hidden rounded-2xl p-6 text-white shadow-lg sm:p-8 lg:col-span-2"
         >
           <div
             class="pointer-events-none absolute top-0 right-0 h-full w-10 bg-linear-to-b from-white/15 via-white/5 to-white/20"
@@ -535,7 +635,7 @@ const faqItems: AccordionItem[] = [
                 />
               </div>
 
-              <h3 class="text-highlighted text-2xl font-bold tracking-tight">
+              <h3 class="text-highlighted text-xl font-bold tracking-tight sm:text-2xl">
                 Test-ride a Stiltz Homelift at our Irvine showroom
               </h3>
 
@@ -569,13 +669,14 @@ const faqItems: AccordionItem[] = [
               </div>
             </div>
 
-            <div class="flex flex-wrap gap-3 pt-2">
+            <div class="flex flex-col gap-2.5 pt-2 sm:flex-row sm:flex-wrap sm:gap-3">
               <UButton
                 label="Book Showroom Visit"
                 icon="i-lucide-calendar"
                 color="primary"
                 variant="solid"
                 size="lg"
+                class="justify-center"
                 @click="openConsultation({ ocSpecial: true })"
               />
               <UButton
@@ -584,6 +685,7 @@ const faqItems: AccordionItem[] = [
                 color="neutral"
                 variant="outline"
                 size="lg"
+                class="justify-center"
                 to="tel:+19492354536"
               />
               <UButton
@@ -592,6 +694,7 @@ const faqItems: AccordionItem[] = [
                 color="neutral"
                 variant="ghost"
                 size="lg"
+                class="justify-center"
                 to="https://maps.google.com/?q=17155+Von+Karman+Ave+%23101,+Irvine,+CA+92614"
                 target="_blank"
               />
@@ -622,7 +725,7 @@ const faqItems: AccordionItem[] = [
         class="border-default bg-default grid overflow-hidden rounded-2xl border shadow-xl lg:grid-cols-12"
       >
         <div
-          class="bg-neutral-100/90 dark:bg-neutral-900/90 flex flex-col justify-between space-y-8 p-8 sm:p-10 lg:col-span-5"
+          class="bg-neutral-100/90 dark:bg-neutral-900/90 flex flex-col justify-between space-y-6 p-5 sm:space-y-8 sm:p-8 lg:col-span-5 lg:p-10"
         >
           <div class="space-y-4">
             <UBadge
@@ -633,17 +736,17 @@ const faqItems: AccordionItem[] = [
               icon="i-lucide-shield-check"
             />
 
-            <h2 class="text-highlighted text-3xl font-bold tracking-tight sm:text-4xl">
+            <h2 class="text-highlighted text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
               Get a Free Consultation
             </h2>
 
-            <p class="text-muted text-base leading-relaxed">
+            <p class="text-muted text-sm leading-relaxed sm:text-base">
               At Upside Home Lifts, we understand that every home and family is unique. That's why
               we offer a free, no-obligation in-home consultation or private Irvine showroom visit
               to help you find the right Stiltz Homelift.
             </p>
 
-            <ul class="space-y-3 pt-2">
+            <ul class="space-y-2.5 pt-1 sm:space-y-3 sm:pt-2">
               <li
                 v-for="benefit in consultationBenefits"
                 :key="benefit"
@@ -655,7 +758,7 @@ const faqItems: AccordionItem[] = [
             </ul>
           </div>
 
-          <div class="border-default space-y-2 border-t pt-6 text-sm">
+          <div class="border-default space-y-2 border-t pt-5 text-sm sm:pt-6">
             <p class="text-highlighted font-semibold">Prefer to speak directly with Jeff Cullen?</p>
             <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
               <a
@@ -679,7 +782,7 @@ const faqItems: AccordionItem[] = [
           </div>
         </div>
 
-        <div class="p-8 sm:p-10 lg:col-span-7">
+        <div class="p-5 sm:p-8 lg:col-span-7 lg:p-10">
           <ConsultationForm />
         </div>
       </div>

@@ -101,6 +101,14 @@ const footerColumns: FooterColumn[] = [
     <UNavigationMenu :items="navItems" variant="link" />
 
     <template #right>
+      <UButton
+        icon="i-lucide-phone"
+        color="primary"
+        variant="subtle"
+        to="tel:+19492354536"
+        aria-label="Call 949.235.4536"
+        class="xl:hidden"
+      />
       <UColorModeButton />
       <UButton
         label="949.235.4536"
@@ -111,11 +119,19 @@ const footerColumns: FooterColumn[] = [
         class="hidden xl:inline-flex"
       />
       <UButton
+        label="Free Consultation"
+        color="primary"
+        variant="solid"
+        trailing-icon="i-lucide-arrow-right"
+        class="hidden sm:inline-flex xl:hidden"
+        @click="openConsultation()"
+      />
+      <UButton
         label="Get a Free Consultation"
         color="primary"
         variant="solid"
         trailing-icon="i-lucide-arrow-right"
-        class="hidden lg:inline-flex"
+        class="hidden xl:inline-flex"
         @click="openConsultation()"
       />
     </template>
@@ -130,6 +146,7 @@ const footerColumns: FooterColumn[] = [
           color="neutral"
           variant="subtle"
           to="tel:+19492354536"
+          size="lg"
           block
         />
         <UButton
@@ -137,6 +154,7 @@ const footerColumns: FooterColumn[] = [
           color="primary"
           variant="solid"
           trailing-icon="i-lucide-arrow-right"
+          size="lg"
           block
           @click="handleMobileConsultation"
         />
@@ -144,7 +162,7 @@ const footerColumns: FooterColumn[] = [
     </template>
   </UHeader>
 
-  <UMain>
+  <UMain class="overflow-x-clip">
     <slot />
   </UMain>
 
@@ -153,14 +171,16 @@ const footerColumns: FooterColumn[] = [
   <div class="bg-neutral-700 text-white dark:bg-neutral-900">
     <UContainer class="py-6">
       <div class="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        <div>
+        <div class="min-w-0">
           <p class="text-xl font-bold tracking-tight sm:text-2xl">
             <span class="text-primary-400">Call</span>
             <a href="tel:+19492354536" class="ml-2 hover:underline">949 235 4536</a>
           </p>
-          <p class="mt-0.5 text-sm text-neutral-200">
+          <p class="mt-1 text-sm leading-relaxed text-neutral-200">
             <span class="text-primary-400 font-medium">Irvine Showroom:</span>
-            17155 Von Karman Ave #101, Irvine, CA 92614 ·
+            17155 Von Karman Ave #101, Irvine, CA 92614
+            <span class="hidden sm:inline"> · </span>
+            <br class="sm:hidden" />
             <a href="mailto:Jeff@UpsideLifts.com" class="underline-offset-2 hover:underline">
               Jeff@UpsideLifts.com
             </a>
@@ -197,7 +217,7 @@ const footerColumns: FooterColumn[] = [
 
     <template #right>
       <UBadge
-        label="Authorized Stiltz Homelifts Dealer · Irvine, CA"
+        label="Authorized Stiltz Dealer · Irvine, CA"
         color="primary"
         variant="subtle"
         size="sm"
