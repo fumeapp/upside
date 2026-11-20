@@ -10,7 +10,7 @@ describe("consultationSchema", () => {
     zipCode: "92614",
     email: "jane@example.com",
     contactMethod: "Phone Call" as const,
-    productInterest: "Stiltz Duo+ (Compact 2-Person)" as const,
+    productInterest: "Stiltz Duo Alta (Compact 2-Person)" as const,
     comments: "Looking at retrofitting next to our living room stairs.",
     ocSpecial: true,
     smsOptIn: true,
@@ -56,7 +56,7 @@ describe("consultation email builder & delivery", () => {
       zipCode: "92660",
       email: "robert@example.com",
       contactMethod: "Irvine Showroom Appointment",
-      productInterest: "Stiltz Trio+ (Wheelchair Accessible)",
+      productInterest: "Stiltz Trio Alta (Wheelchair Accessible)",
       comments: "Remodeling our Newport Beach home <phase 2>.",
       ocSpecial: true,
       smsOptIn: false,
@@ -64,7 +64,7 @@ describe("consultation email builder & delivery", () => {
 
     const email = buildConsultationEmail(parsed);
     expect(email.subject).toContain("Robert Miller (92660)");
-    expect(email.subject).toContain("Stiltz Trio+");
+    expect(email.subject).toContain("Stiltz Trio Alta");
     expect(email.html).toContain("tel:9495552200");
     expect(email.html).toContain("&lt;phase 2&gt;");
     expect(email.html).toContain("Yes — requested details");
@@ -90,7 +90,7 @@ describe("consultation email builder & delivery", () => {
       zipCode: "92614",
       email: "susan@example.com",
       contactMethod: "Email",
-      productInterest: "Stiltz Vista (Clear Panoramic)",
+      productInterest: "Stiltz Duo Alta (Compact 2-Person)",
     });
 
     const result = await sendConsultationEmail(mockEvent, parsed, {

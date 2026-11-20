@@ -94,44 +94,30 @@ const liftModels: (PageCardProps & {
   {
     badge: "01 · Compact 2-Person",
     badgeColor: "primary",
-    title: "Stiltz Duo+",
+    title: "Stiltz Duo Alta",
     description:
       "The smallest-footprint Stiltz Homelift. Fits neatly beside a staircase, inside stacked closets, or in a quiet living room corner without crowding your space.",
     image: "/images/home/duo-lift.jpg",
-    imageAlt: "Stiltz Duo+ compact 2-person shaftless home lift beside a staircase",
+    imageAlt: "Stiltz Duo Alta compact 2-person shaftless home lift beside a staircase",
     specs: ["6.8 sq ft footprint", "375 lb capacity", "Up to 20 ft travel"],
     variant: "subtle",
     spotlight: true,
     spotlightColor: "primary",
-    interestValue: "Stiltz Duo+ (Compact 2-Person)",
+    interestValue: "Stiltz Duo Alta (Compact 2-Person)",
   },
   {
     badge: "02 · Wheelchair Accessible",
     badgeColor: "secondary",
-    title: "Stiltz Trio+",
+    title: "Stiltz Trio Alta",
     description:
       "Our spacious 3-person and full-sized wheelchair model with a wide, flush threshold and optional thru-car entry—built for effortless future-proofing.",
     image: "/images/home/trio-lift.jpg",
-    imageAlt: "Stiltz Trio+ wheelchair-accessible panoramic home elevator in a bright living room",
+    imageAlt: "Stiltz Trio Alta wheelchair-accessible panoramic home elevator in a bright living room",
     specs: ["13.6 sq ft footprint", "500 lb capacity", "Full wheelchair ready"],
     variant: "subtle",
     spotlight: true,
     spotlightColor: "secondary",
-    interestValue: "Stiltz Trio+ (Wheelchair Accessible)",
-  },
-  {
-    badge: "03 · Clear Panoramic Option",
-    badgeColor: "primary",
-    title: "Stiltz Vista",
-    description:
-      "Crystal-clear curved polycarbonate walls available across Duo+ and Trio+, preserving natural daylight and sightlines in open-plan homes.",
-    image: "/images/home/hero-lift.jpg",
-    imageAlt: "Stiltz Vista clear panoramic home lift in a sunlit living space",
-    specs: ["Clear panoramic body", "Natural light flow", "Whisper-quiet drive"],
-    variant: "subtle",
-    spotlight: true,
-    spotlightColor: "primary",
-    interestValue: "Stiltz Vista (Clear Panoramic)",
+    interestValue: "Stiltz Trio Alta (Wheelchair Accessible)",
   },
 ];
 
@@ -169,52 +155,44 @@ const installSteps = [
 interface SpecRow {
   feature: string;
   duo: string;
-  vista: string;
   trio: string;
 }
 
 const specColumns: TableColumn<SpecRow>[] = [
   { accessorKey: "feature", header: "Specification" },
-  { accessorKey: "duo", header: "Stiltz Duo+" },
-  { accessorKey: "vista", header: "Stiltz Vista" },
-  { accessorKey: "trio", header: "Stiltz Trio+" },
+  { accessorKey: "duo", header: "Stiltz Duo Alta" },
+  { accessorKey: "trio", header: "Stiltz Trio Alta" },
 ];
 
 const specRows: SpecRow[] = [
   {
     feature: "Footprint",
     duo: "6.8 sq ft (31.5″ × 41″)",
-    vista: "Available on Duo+ & Trio+",
     trio: "13.6 sq ft (41.5″ × 52.5″)",
   },
   {
     feature: "Max Capacity",
     duo: "375 lbs (2 people)",
-    vista: "375 – 500 lbs",
     trio: "500 lbs (3 people / wheelchair)",
   },
   {
     feature: "Wheelchair / Walker",
     duo: "Compact walker",
-    vista: "Full wheelchair on Trio Vista",
     trio: "Full-size standard wheelchair",
   },
   {
     feature: "Max Travel Height",
     duo: "Up to 20 ft (high ceilings OK)",
-    vista: "Up to 20 ft (high ceilings OK)",
     trio: "Up to 20 ft (high ceilings OK)",
   },
   {
     feature: "Drive & Power",
     duo: "Quiet self-contained · 220V",
-    vista: "Quiet self-contained · 220V",
     trio: "Quiet self-contained · 220V",
   },
   {
     feature: "Typical Lift Install",
     duo: "1–2 days",
-    vista: "1–2 days",
     trio: "1–2 days",
   },
 ];
@@ -223,29 +201,22 @@ const mobileSpecModels: {
   name: string;
   badge: string;
   badgeColor: "primary" | "secondary";
-  key: "duo" | "vista" | "trio";
+  key: "duo" | "trio";
   interestValue: LiftInterest;
 }[] = [
   {
-    name: "Stiltz Duo+",
+    name: "Stiltz Duo Alta",
     badge: "Compact 2-Person",
     badgeColor: "primary",
     key: "duo",
-    interestValue: "Stiltz Duo+ (Compact 2-Person)",
+    interestValue: "Stiltz Duo Alta (Compact 2-Person)",
   },
   {
-    name: "Stiltz Trio+",
+    name: "Stiltz Trio Alta",
     badge: "Wheelchair Accessible",
     badgeColor: "secondary",
     key: "trio",
-    interestValue: "Stiltz Trio+ (Wheelchair Accessible)",
-  },
-  {
-    name: "Stiltz Vista",
-    badge: "Clear Panoramic",
-    badgeColor: "primary",
-    key: "vista",
-    interestValue: "Stiltz Vista (Clear Panoramic)",
+    interestValue: "Stiltz Trio Alta (Wheelchair Accessible)",
   },
 ];
 
@@ -402,10 +373,10 @@ const faqItems: AccordionItem[] = [
     <UPageSection
       id="models"
       headline="The Stiltz Homelifts Lineup"
-      title="Three thoughtfully proportioned home lifts"
-      description="From our ultra-compact 2-person Duo+ to the full wheelchair-accessible Trio+ and clear Vista edition—all engineered to travel up to 20 feet."
+      title="Two thoughtfully proportioned home lifts"
+      description="Choose between our ultra-compact 2-person Duo Alta and our full wheelchair-accessible Trio Alta—both engineered to travel up to 20 feet."
     >
-      <UPageGrid>
+      <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
         <UPageCard
           v-for="model in liftModels"
           :key="model.title"
@@ -464,7 +435,7 @@ const faqItems: AccordionItem[] = [
             />
           </div>
         </UPageCard>
-      </UPageGrid>
+      </div>
     </UPageSection>
 
     <USeparator />
@@ -501,12 +472,7 @@ const faqItems: AccordionItem[] = [
     >
       <!-- Stacked cards on mobile & portrait tablet (< lg) so there is zero horizontal overflow -->
       <div class="grid gap-4 md:grid-cols-2 lg:hidden">
-        <UPageCard
-          v-for="model in mobileSpecModels"
-          :key="model.name"
-          variant="subtle"
-          :class="model.key === 'vista' ? 'md:col-span-2' : ''"
-        >
+        <UPageCard v-for="model in mobileSpecModels" :key="model.name" variant="subtle">
           <div class="space-y-4">
             <div class="flex items-center justify-between gap-2">
               <h3 class="text-highlighted text-lg font-bold tracking-tight">{{ model.name }}</h3>
