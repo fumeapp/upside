@@ -14,6 +14,14 @@
       "pattern": "www.upsidelifts.com",
       "custom_domain": true,
     },
+    {
+      "pattern": "upsidehomelifts.com",
+      "custom_domain": true,
+    },
+    {
+      "pattern": "www.upsidehomelifts.com",
+      "custom_domain": true,
+    },
   ],
   "assets": {
     "directory": "./.output/public/",
