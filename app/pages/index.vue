@@ -14,7 +14,7 @@ useSeoMeta({
   title: "Stiltz Homelifts in Orange County",
   ogTitle: "Upside Home Lifts — Stiltz Homelifts turns your new home into a forever home.",
   description:
-    "Authorized Stiltz Homelifts dealer in Irvine, CA. Shaftless residential elevators with contemporary styling, small footprint, and travel up to 20 feet. Call Jeff Cullen at 949.235.4536.",
+    "Authorized Stiltz Homelifts dealer in Irvine, CA. Shaftless residential elevators with contemporary styling, small footprint, and travel up to 20 feet. Call Jeff Cullen at 949.418.9517.",
   ogDescription:
     "Whether renovating, extending, or building from the ground up, future-proof with confidence with a Stiltz Homelift. Visit our Irvine showroom.",
 });
@@ -28,8 +28,8 @@ const heroLinks: ButtonProps[] = [
     onClick: () => openConsultation(),
   },
   {
-    label: "Call 949.235.4536",
-    to: "tel:+19492354536",
+    label: "Call 949.418.9517",
+    to: "tel:+19494189517",
     size: "xl",
     color: "neutral",
     variant: "subtle",
@@ -243,7 +243,7 @@ const faqItems: AccordionItem[] = [
     label: "Can I see and ride a Stiltz Homelift before buying?",
     icon: "i-lucide-map-pin",
     content:
-      "Yes! Upside Home Lifts operates a dedicated showroom in Irvine at 17155 Von Karman Ave #101. Call Jeff Cullen at 949.235.4536 or submit the consultation form below to book a private appointment and ask about our Veteran Special.",
+      "Yes! Upside Home Lifts operates a dedicated showroom in Irvine at 17155 Von Karman Ave #101. Call Jeff Cullen at 949.418.9517 or submit the consultation form below to book a private appointment and ask about our Veteran Special.",
   },
   {
     label: "Can a Stiltz Homelift be retrofitted into my existing home?",
@@ -553,11 +553,11 @@ const faqItems: AccordionItem[] = [
 
           <div class="mt-8 space-y-2.5 text-sm">
             <a
-              href="tel:+19492354536"
+              href="tel:+19494189517"
               class="flex items-center gap-2.5 font-medium text-white hover:underline"
             >
               <UIcon name="i-lucide-phone" class="text-primary-300 size-4 shrink-0" />
-              949.235.4536
+              949.418.9517
             </a>
             <a
               href="mailto:Jeff@UpsideLifts.com"
@@ -647,13 +647,13 @@ const faqItems: AccordionItem[] = [
                 @click="openConsultation({ veteranSpecial: true })"
               />
               <UButton
-                label="Call 949.235.4536"
+                label="Call 949.418.9517"
                 icon="i-lucide-phone"
                 color="neutral"
                 variant="outline"
                 size="lg"
                 class="justify-center"
-                to="tel:+19492354536"
+                to="tel:+19494189517"
               />
               <UButton
                 label="Directions"
@@ -729,11 +729,11 @@ const faqItems: AccordionItem[] = [
             <p class="text-highlighted font-semibold">Prefer to speak directly with Jeff Cullen?</p>
             <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
               <a
-                href="tel:+19492354536"
+                href="tel:+19494189517"
                 class="text-primary inline-flex items-center gap-1.5 font-semibold hover:underline"
               >
                 <UIcon name="i-lucide-phone" class="size-4" />
-                949.235.4536
+                949.418.9517
               </a>
               <a
                 href="mailto:Jeff@UpsideLifts.com"

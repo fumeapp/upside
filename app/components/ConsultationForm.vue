@@ -94,7 +94,7 @@ async function onSubmit(event: FormSubmitEvent<ConsultationInput>) {
     errorMessage.value =
       fetchErr?.data?.message ||
       fetchErr?.statusMessage ||
-      "We couldn't send your request right now. Please call Jeff directly at 949.235.4536.";
+      "We couldn't send your request right now. Please call Jeff directly at 949.418.9517.";
   } finally {
     loading.value = false;
   }
@@ -139,11 +139,11 @@ function resetForm() {
 
     <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
       <UButton
-        label="Call 949.235.4536 Now"
+        label="Call 949.418.9517 Now"
         icon="i-lucide-phone"
         color="primary"
         variant="solid"
-        to="tel:+19492354536"
+        to="tel:+19494189517"
       />
       <UButton
         label="Submit Another Request"

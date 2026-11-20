@@ -77,7 +77,7 @@ const footerColumns: FooterColumn[] = [
   {
     label: "Contact Jeff Cullen",
     children: [
-      { label: "Call 949.235.4536", to: "tel:+19492354536", active: false },
+      { label: "Call 949.418.9517", to: "tel:+19494189517", active: false },
       { label: "Jeff@UpsideLifts.com", to: "mailto:Jeff@UpsideLifts.com", active: false },
       {
         label: "17155 Von Karman Ave #101, Irvine, CA",
@@ -104,17 +104,17 @@ const footerColumns: FooterColumn[] = [
         icon="i-lucide-phone"
         color="primary"
         variant="subtle"
-        to="tel:+19492354536"
-        aria-label="Call 949.235.4536"
+        to="tel:+19494189517"
+        aria-label="Call 949.418.9517"
         class="xl:hidden"
       />
       <UColorModeButton />
       <UButton
-        label="949.235.4536"
+        label="949.418.9517"
         icon="i-lucide-phone"
         color="neutral"
         variant="outline"
-        to="tel:+19492354536"
+        to="tel:+19494189517"
         class="hidden xl:inline-flex"
       />
       <UButton
@@ -140,11 +140,11 @@ const footerColumns: FooterColumn[] = [
       <USeparator class="my-6" />
       <div class="space-y-3">
         <UButton
-          label="Call 949.235.4536"
+          label="Call 949.418.9517"
           icon="i-lucide-phone"
           color="neutral"
           variant="subtle"
-          to="tel:+19492354536"
+          to="tel:+19494189517"
           size="lg"
           block
         />
@@ -173,7 +173,7 @@ const footerColumns: FooterColumn[] = [
         <div class="min-w-0">
           <p class="text-xl font-bold tracking-tight sm:text-2xl">
             <span class="text-primary-400">Call</span>
-            <a href="tel:+19492354536" class="ml-2 hover:underline">949 235 4536</a>
+            <a href="tel:+19494189517" class="ml-2 hover:underline">949 418 9517</a>
           </p>
           <p class="mt-1 text-sm leading-relaxed text-neutral-200">
             <span class="text-primary-400 font-medium">Irvine Showroom:</span>
