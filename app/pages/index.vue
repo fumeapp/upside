@@ -548,6 +548,9 @@ const faqItems: AccordionItem[] = [
                 Jeff Cullen
               </p>
               <p class="mt-2 text-sm font-light tracking-wide text-neutral-200">Owner</p>
+              <p class="mt-1 text-xs font-medium tracking-wider text-neutral-300">
+                License #1164819
+              </p>
             </div>
           </div>
 

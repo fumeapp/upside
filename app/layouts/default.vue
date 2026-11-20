@@ -210,7 +210,7 @@ const footerColumns: FooterColumn[] = [
 
     <template #left>
       <p class="text-muted text-sm">
-        © {{ new Date().getFullYear() }} Upside Home Lifts. All rights reserved.
+        © {{ new Date().getFullYear() }} Upside Home Lifts. All rights reserved. · License #1164819
       </p>
     </template>
 
