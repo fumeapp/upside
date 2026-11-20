@@ -205,22 +205,26 @@ const specRows: SpecRow[] = [
   },
 ];
 
-const footprintDiagrams = [
+const footprintDiagrams: {
+  model: "duo" | "trio";
+  name: string;
+  badge: string;
+  badgeColor: "primary" | "secondary";
+  notes: string[];
+}[] = [
   {
+    model: "duo",
     name: "Duo Alta Footprint",
     badge: "8.5 sq ft · 375 lb",
-    badgeColor: "primary" as const,
-    image: "/images/specs/duo-alta-footprint.jpg",
-    alt: "Stiltz Duo Alta official footprint dimension diagram: 31 7/8 inches by 41 1/4 inches, 8.5 square feet, 375 lb limit",
-    dims: ["External: 31 7/8″ × 41 1/4″", "Entrance: 23 1/8″", "Min upstairs ceiling: 93″"],
+    badgeColor: "primary",
+    notes: ["Up to 14 ft travel", "Min upstairs ceiling: 93″", "4″ reduced cab option"],
   },
   {
+    model: "trio",
     name: "Trio Alta / Thru-Car Footprint",
     badge: "15 sq ft · 550 lb*",
-    badgeColor: "secondary" as const,
-    image: "/images/specs/trio-alta-footprint.jpg",
-    alt: "Stiltz Trio Alta and Trio Alta Thru-Car official footprint dimension diagram: 50 3/8 inches by 41 1/4 inches, 15 square feet, 550 lb limit",
-    dims: ["External: 50 3/8″ × 41 1/4″", "Entrance: 31 1/2″", "Min upstairs ceiling: 96″"],
+    badgeColor: "secondary",
+    notes: ["Up to 19.5 ft travel", "Min upstairs ceiling: 96″", "Dual-entry Thru-Car option"],
   },
 ];
 
@@ -614,22 +618,13 @@ useHead({
                 />
               </div>
 
-              <div
-                class="flex min-h-72 items-center justify-center rounded-xl border border-neutral-200 bg-white p-4 sm:min-h-88 sm:p-6"
-              >
-                <img
-                  :src="diagram.image"
-                  :alt="diagram.alt"
-                  class="max-h-80 w-auto object-contain sm:max-h-96"
-                  loading="lazy"
-                />
-              </div>
+              <FootprintDiagram :model="diagram.model" />
 
               <div class="flex flex-wrap gap-1.5">
                 <UBadge
-                  v-for="dim in diagram.dims"
-                  :key="dim"
-                  :label="dim"
+                  v-for="note in diagram.notes"
+                  :key="note"
+                  :label="note"
                   color="neutral"
                   variant="outline"
                   size="sm"

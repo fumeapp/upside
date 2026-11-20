@@ -175,15 +175,7 @@ useHead({
               <h3 class="text-highlighted text-lg font-bold">Trio Alta / Thru-Car Diagram</h3>
               <UBadge label="15 sq ft · 550 lb*" color="secondary" variant="subtle" size="sm" />
             </div>
-            <div
-              class="flex min-h-80 items-center justify-center rounded-xl border border-neutral-200 bg-white p-4 sm:p-6"
-            >
-              <img
-                src="/images/specs/trio-alta-footprint.jpg"
-                alt="Stiltz Trio Alta and Thru-Car official footprint dimension diagram"
-                class="max-h-96 w-auto object-contain"
-              />
-            </div>
+            <FootprintDiagram model="trio" />
             <p class="text-muted text-xs leading-relaxed">
               * Dimensions are for general reference and are not to be used for construction
               purposes. Local code requirements may limit weight to 500 lbs (227 kg). 4″ reduced cab
