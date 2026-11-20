@@ -14,7 +14,7 @@ useSeoMeta({
   title: "Stiltz Homelifts in Orange County",
   ogTitle: "Upside Home Lifts — Stiltz Homelifts turns your new home into a forever home.",
   description:
-    "Authorized Stiltz Homelifts dealer in Irvine, CA. Shaftless residential elevators with contemporary styling, small footprint, and travel up to 20 feet. Call Jeff Cullen at 949.418.9517.",
+    "Authorized Stiltz Homelifts dealer in Irvine, CA. Shaftless residential elevators with contemporary styling, small footprint, and travel up to 19.5 feet. Call Jeff Cullen at 949.418.9517.",
   ogDescription:
     "Whether renovating, extending, or building from the ground up, future-proof with confidence with a Stiltz Homelift. Visit our Irvine showroom.",
 });
@@ -39,7 +39,7 @@ const heroLinks: ButtonProps[] = [
 
 const heroHighlights = [
   { label: "37,000+ Installed", icon: "i-lucide-award" },
-  { label: "Up to 20 ft Travel", icon: "i-lucide-arrow-up-down" },
+  { label: "Up to 19.5 ft Travel", icon: "i-lucide-arrow-up-down" },
   { label: "No Shaft or Pit", icon: "i-lucide-columns-2" },
   { label: "1–2 Day Install", icon: "i-lucide-clock" },
 ];
@@ -64,9 +64,9 @@ const whyFeatures: PageFeatureProps[] = [
     icon: "i-lucide-drafting-compass",
   },
   {
-    title: "High Ceilings & Up to 20 Feet of Travel",
+    title: "High Ceilings & Up to 19.5 Feet of Travel",
     description:
-      "Double-height rooms, barn conversions, and high-ceilinged Southern California properties are easily handled—our latest Stiltz models travel up to 20 feet.",
+      "Double-height rooms, barn conversions, and high-ceilinged Southern California properties are easily handled—with Trio Alta traveling up to 19.5 feet.",
     icon: "i-lucide-arrow-up-down",
   },
   {
@@ -183,7 +183,7 @@ const specRows: SpecRow[] = [
   {
     feature: "Max Travel Height",
     duo: "Up to 14 ft",
-    trio: "Up to 20 ft (high ceilings OK)",
+    trio: "Up to 19.5 ft (high ceilings OK)",
   },
   {
     feature: "Drive & Power",
@@ -255,7 +255,7 @@ const faqItems: AccordionItem[] = [
     label: "Does it work with high ceilings or double-height rooms?",
     icon: "i-lucide-arrow-up-down",
     content:
-      "Yes. Our Stiltz Trio Alta travels up to 20 feet (and the compact Duo Alta up to 14 feet), making Stiltz ideal for high-ceilinged California homes, loft spaces, double-height rooms, and custom conversions.",
+      "Yes. Our Stiltz Trio Alta travels up to 19.5 feet (and the compact Duo Alta up to 14 feet), making Stiltz ideal for high-ceilinged California homes, loft spaces, double-height rooms, and custom conversions.",
   },
   {
     label: "What happens if the power goes out while I'm inside?",
@@ -276,7 +276,7 @@ const faqItems: AccordionItem[] = [
   <UPage>
     <UPageHero
       headline="Authorized Stiltz Homelifts Dealer · Orange County, CA"
-      description="Whether renovating, extending, or building from the ground up, future-proof with confidence. Installed cleanly in existing homes or new builds by Upside Home Lifts—with models traveling up to 20 feet."
+      description="Whether renovating, extending, or building from the ground up, future-proof with confidence. Installed cleanly in existing homes or new builds by Upside Home Lifts—with models traveling up to 19.5 feet."
       orientation="horizontal"
       :links="heroLinks"
       :ui="{
@@ -374,7 +374,7 @@ const faqItems: AccordionItem[] = [
       id="models"
       headline="The Stiltz Homelifts Lineup"
       title="Two thoughtfully proportioned home lifts"
-      description="Choose between our ultra-compact 2-person Duo Alta (up to 14 ft travel) and our full wheelchair-accessible Trio Alta (up to 20 ft travel)."
+      description="Choose between our ultra-compact 2-person Duo Alta (up to 14 ft travel) and our full wheelchair-accessible Trio Alta (up to 19.5 ft travel)."
     >
       <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
         <UPageCard
