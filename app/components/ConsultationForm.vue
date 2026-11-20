@@ -28,6 +28,7 @@ const emit = defineEmits<{
 }>();
 
 const toast = useToast();
+const { trackEvent } = useAnalytics();
 const loading = ref(false);
 const submitted = ref(false);
 const errorMessage = ref("");
@@ -80,6 +81,13 @@ async function onSubmit(event: FormSubmitEvent<ConsultationInput>) {
       contactMethod: event.data.contactMethod,
     };
     submitted.value = true;
+
+    trackEvent("generate_lead", {
+      product_interest: event.data.productInterest,
+      contact_method: event.data.contactMethod,
+      veteran_special: Boolean(event.data.veteranSpecial),
+      zip_code: event.data.zipCode,
+    });
 
     toast.add({
       title: "Consultation request received",
