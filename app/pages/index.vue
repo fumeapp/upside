@@ -48,7 +48,7 @@ const whyFeatures: PageFeatureProps[] = [
   {
     title: "Contemporary Styling & Small Footprint",
     description:
-      "A neat, discreet solution for moving between floors that blends effortlessly into modern interiors—starting at under 7 square feet with no masonry shaft.",
+      "A neat, discreet solution for moving between floors that blends effortlessly into modern interiors—starting at just 8.5 square feet with no masonry shaft.",
     icon: "i-lucide-maximize-2",
   },
   {
@@ -99,7 +99,7 @@ const liftModels: (PageCardProps & {
       "The smallest-footprint Stiltz Homelift. Fits neatly beside a staircase, inside stacked closets, or in a quiet living room corner without crowding your space.",
     image: "/images/home/duo-alta-v2.jpg",
     imageAlt: "Stiltz Duo Alta compact 2-person home elevator beside a sunlit oak staircase",
-    specs: ["6.8 sq ft footprint", "375 lb capacity", "Up to 14 ft travel"],
+    specs: ["8.5 sq ft footprint", "375 lb capacity", "Up to 14 ft travel"],
     variant: "subtle",
     spotlight: true,
     spotlightColor: "primary",
@@ -113,7 +113,7 @@ const liftModels: (PageCardProps & {
       "Our spacious 3-person and full-sized wheelchair model with a wide, flush threshold and optional thru-car entry—built for effortless future-proofing.",
     image: "/images/home/trio-alta-studio.jpg",
     imageAlt: "Stiltz Trio Alta wheelchair-accessible home elevator in a sunlit living room",
-    specs: ["13.6 sq ft footprint", "500 lb capacity", "Full wheelchair ready"],
+    specs: ["15 sq ft footprint", "Up to 550 lb capacity*", "Full wheelchair ready"],
     variant: "subtle",
     spotlight: true,
     spotlightColor: "secondary",
@@ -167,13 +167,13 @@ const specColumns: TableColumn<SpecRow>[] = [
 const specRows: SpecRow[] = [
   {
     feature: "Footprint",
-    duo: "6.8 sq ft (31.5″ × 41″)",
-    trio: "13.6 sq ft (41.5″ × 52.5″)",
+    duo: "8.5 sq ft (31 7/8″ × 41 1/4″)",
+    trio: "15 sq ft (50 3/8″ × 41 1/4″)",
   },
   {
-    feature: "Max Capacity",
-    duo: "375 lbs (2 people)",
-    trio: "500 lbs (3 people / wheelchair)",
+    feature: "Weight Limit",
+    duo: "375 lbs / 170 kg (2 people)",
+    trio: "550 lbs / 250 kg* (3 people / wheelchair)",
   },
   {
     feature: "Wheelchair / Walker",
@@ -186,6 +186,11 @@ const specRows: SpecRow[] = [
     trio: "Up to 19.5 ft (high ceilings OK)",
   },
   {
+    feature: "Min Upstairs Ceiling",
+    duo: "93″ (2360 mm)",
+    trio: "96″ (2438 mm)",
+  },
+  {
     feature: "Drive & Power",
     duo: "Quiet self-contained · 220V",
     trio: "Quiet self-contained · 220V",
@@ -194,6 +199,25 @@ const specRows: SpecRow[] = [
     feature: "Typical Lift Install",
     duo: "1–2 days",
     trio: "1–2 days",
+  },
+];
+
+const footprintDiagrams = [
+  {
+    name: "Duo Alta Footprint",
+    badge: "8.5 sq ft · 375 lb",
+    badgeColor: "primary" as const,
+    image: "/images/specs/duo-alta-footprint.jpg",
+    alt: "Stiltz Duo Alta official footprint dimension diagram: 31 7/8 inches by 41 1/4 inches, 8.5 square feet, 375 lb limit",
+    dims: ["External: 31 7/8″ × 41 1/4″", "Entrance: 23 1/8″", "Min upstairs ceiling: 93″"],
+  },
+  {
+    name: "Trio Alta / Thru-Car Footprint",
+    badge: "15 sq ft · 550 lb*",
+    badgeColor: "secondary" as const,
+    image: "/images/specs/trio-alta-footprint.jpg",
+    alt: "Stiltz Trio Alta and Trio Alta Thru-Car official footprint dimension diagram: 50 3/8 inches by 41 1/4 inches, 15 square feet, 550 lb limit",
+    dims: ["External: 50 3/8″ × 41 1/4″", "Entrance: 31 1/2″", "Min upstairs ceiling: 96″"],
   },
 ];
 
@@ -523,6 +547,64 @@ const faqItems: AccordionItem[] = [
           />
         </div>
       </UPageCard>
+
+      <!-- Official Duo Alta & Trio Alta Footprint Diagrams -->
+      <div class="mt-8 space-y-6">
+        <div class="grid gap-6 md:grid-cols-2">
+          <UPageCard
+            v-for="diagram in footprintDiagrams"
+            :key="diagram.name"
+            variant="subtle"
+            :ui="{
+              container: 'h-full',
+              wrapper: 'h-full items-stretch',
+            }"
+          >
+            <div class="flex h-full flex-col justify-between gap-4">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <h3 class="text-highlighted text-lg font-bold tracking-tight">
+                  {{ diagram.name }}
+                </h3>
+                <UBadge
+                  :label="diagram.badge"
+                  :color="diagram.badgeColor"
+                  variant="subtle"
+                  size="sm"
+                />
+              </div>
+
+              <div
+                class="flex min-h-72 items-center justify-center rounded-xl border border-neutral-200 bg-white p-4 sm:min-h-88 sm:p-6"
+              >
+                <img
+                  :src="diagram.image"
+                  :alt="diagram.alt"
+                  class="max-h-80 w-auto object-contain sm:max-h-96"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="flex flex-wrap gap-1.5">
+                <UBadge
+                  v-for="dim in diagram.dims"
+                  :key="dim"
+                  :label="dim"
+                  color="neutral"
+                  variant="outline"
+                  size="sm"
+                />
+              </div>
+            </div>
+          </UPageCard>
+        </div>
+
+        <p class="text-muted mx-auto max-w-4xl text-center text-xs leading-relaxed">
+          * Dimensions are for general reference and are not to be used for construction purposes.
+          All Stiltz Homelift cars can be special-ordered with a cab height reduced by 4″ (100 mm)
+          to meet lower upstairs ceiling heights. Local code requirements may limit the weight for
+          the Trio Alta / Trio Alta Thru-Car to 500 lbs (227 kg).
+        </p>
+      </div>
     </UPageSection>
 
     <USeparator />
