@@ -99,7 +99,7 @@ const liftModels: (PageCardProps & {
       "The smallest-footprint Stiltz Homelift. Fits neatly beside a staircase, inside stacked closets, or in a quiet living room corner without crowding your space.",
     image: "/images/home/duo-alta-v2.jpg",
     imageAlt: "Stiltz Duo Alta compact 2-person home elevator beside a sunlit oak staircase",
-    specs: ["6.8 sq ft footprint", "375 lb capacity", "Up to 20 ft travel"],
+    specs: ["6.8 sq ft footprint", "375 lb capacity", "Up to 14 ft travel"],
     variant: "subtle",
     spotlight: true,
     spotlightColor: "primary",
@@ -182,7 +182,7 @@ const specRows: SpecRow[] = [
   },
   {
     feature: "Max Travel Height",
-    duo: "Up to 20 ft (high ceilings OK)",
+    duo: "Up to 14 ft",
     trio: "Up to 20 ft (high ceilings OK)",
   },
   {
@@ -255,7 +255,7 @@ const faqItems: AccordionItem[] = [
     label: "Does it work with high ceilings or double-height rooms?",
     icon: "i-lucide-arrow-up-down",
     content:
-      "Yes. Our latest Stiltz Homelifts travel up to 20 feet, making them ideal for high-ceilinged California homes, loft spaces, double-height rooms, and custom conversions.",
+      "Yes. Our Stiltz Trio Alta travels up to 20 feet (and the compact Duo Alta up to 14 feet), making Stiltz ideal for high-ceilinged California homes, loft spaces, double-height rooms, and custom conversions.",
   },
   {
     label: "What happens if the power goes out while I'm inside?",
@@ -374,7 +374,7 @@ const faqItems: AccordionItem[] = [
       id="models"
       headline="The Stiltz Homelifts Lineup"
       title="Two thoughtfully proportioned home lifts"
-      description="Choose between our ultra-compact 2-person Duo Alta and our full wheelchair-accessible Trio Alta—both engineered to travel up to 20 feet."
+      description="Choose between our ultra-compact 2-person Duo Alta (up to 14 ft travel) and our full wheelchair-accessible Trio Alta (up to 20 ft travel)."
     >
       <div class="mx-auto grid max-w-5xl gap-6 md:grid-cols-2">
         <UPageCard
