@@ -22,6 +22,7 @@
   "vars": {
     "NUXT_PUBLIC_PREFIX": "upside",
     "NUXT_PUBLIC_URL": "https://upsidelifts.com",
+    "NUXT_PUBLIC_GA_ID": "G-DPXHZZZ3PE",
     "NUXT_MAIL_FROM": "upside@fume.bio",
     "NUXT_MAIL_TO": "Jeff@UpsideLifts.com",
   },

@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const colorMode = useColorMode();
 const color = computed(() => (colorMode.value === "dark" ? "#181d22" : "#f6f7f8"));
+const runtimeConfig = useRuntimeConfig();
+const gaId = runtimeConfig.public.gaId;
 const siteUrl = "https://upsidelifts.com";
 const ogImageUrl = `${siteUrl}/images/home/hero-alta.jpg`;
 
@@ -70,6 +72,17 @@ useHead({
     { rel: "canonical", href: siteUrl },
   ],
   script: [
+    ...(gaId
+      ? [
+          {
+            src: `https://www.googletagmanager.com/gtag/js?id=${gaId}`,
+            async: true,
+          },
+          {
+            innerHTML: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${gaId}');`,
+          },
+        ]
+      : []),
     {
       type: "application/ld+json",
       innerHTML: JSON.stringify(localBusinessSchema),
