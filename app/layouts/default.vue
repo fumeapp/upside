@@ -19,32 +19,49 @@ function handleMobileConsultation() {
 
 const navItems = computed<NavigationMenuItem[]>(() => [
   {
-    label: "Why Stiltz",
-    icon: "i-lucide-sparkles",
-    to: "/#why-stiltz",
-    active: false,
-  },
-  {
     label: "Models",
     icon: "i-lucide-layers",
     to: "/#models",
-    active: false,
+    active: route.path === "/duo-alta" || route.path === "/trio-alta",
+    children: [
+      {
+        label: "Stiltz Duo Alta",
+        description: "Compact 2-person lift · 8.5 sq ft · up to 14 ft travel.",
+        icon: "i-lucide-minimize-2",
+        to: "/duo-alta",
+        active: route.path === "/duo-alta",
+      },
+      {
+        label: "Stiltz Trio Alta",
+        description: "Wheelchair-accessible & Thru-Car · 15 sq ft · up to 19.5 ft travel.",
+        icon: "i-lucide-accessibility",
+        to: "/trio-alta",
+        active: route.path === "/trio-alta",
+      },
+      {
+        label: "Compare Specifications",
+        description: "Side-by-side footprint diagrams, capacities, and ceiling requirements.",
+        icon: "i-lucide-ruler",
+        to: "/#specs",
+        active: false,
+      },
+    ],
   },
   {
-    label: "Process",
-    icon: "i-lucide-hammer",
-    to: "/#process",
-    active: false,
+    label: "Pricing",
+    icon: "i-lucide-dollar-sign",
+    to: "/cost",
+    active: route.path === "/cost",
   },
   {
-    label: "Specs",
-    icon: "i-lucide-ruler",
-    to: "/#specs",
-    active: false,
+    label: "Orange County",
+    icon: "i-lucide-map-pin",
+    to: "/orange-county",
+    active: route.path === "/orange-county",
   },
   {
     label: "Showroom",
-    icon: "i-lucide-map-pin",
+    icon: "i-lucide-building-2",
     to: "/#showroom",
     active: false,
   },
@@ -60,18 +77,19 @@ const footerColumns: FooterColumn[] = [
   {
     label: "Stiltz Models",
     children: [
-      { label: "Stiltz Duo Alta", to: "/#models", active: false },
-      { label: "Stiltz Trio Alta", to: "/#models", active: false },
+      { label: "Stiltz Duo Alta", to: "/duo-alta", active: false },
+      { label: "Stiltz Trio Alta", to: "/trio-alta", active: false },
       { label: "Compare Specifications", to: "/#specs", active: false },
+      { label: "OC Pricing Guide", to: "/cost", active: false },
     ],
   },
   {
-    label: "Why Upside",
+    label: "Local Service",
     children: [
-      { label: "Future-Proof Your Home", to: "/#why-stiltz", active: false },
-      { label: "For Architects & Builders", to: "/#process", active: false },
+      { label: "Orange County Service Area", to: "/orange-county", active: false },
       { label: "Irvine Showroom", to: "/#showroom", active: false },
       { label: "Free Consultation", to: "/#consultation", active: false },
+      { label: "Privacy Policy & SMS Terms", to: "/privacy", active: false },
     ],
   },
   {
@@ -97,7 +115,13 @@ const footerColumns: FooterColumn[] = [
       <Logo />
     </template>
 
-    <UNavigationMenu :items="navItems" variant="link" />
+    <UNavigationMenu
+      :items="navItems"
+      variant="link"
+      :ui="{
+        viewport: 'sm:w-112 shrink-0',
+      }"
+    />
 
     <template #right>
       <UButton
@@ -211,6 +235,10 @@ const footerColumns: FooterColumn[] = [
     <template #left>
       <p class="text-muted text-sm">
         © {{ new Date().getFullYear() }} Upside Home Lifts. All rights reserved. · License #1164819
+        ·
+        <NuxtLink to="/privacy" class="hover:text-highlighted underline underline-offset-2">
+          Privacy &amp; SMS Terms
+        </NuxtLink>
       </p>
     </template>
 

@@ -1,10 +1,14 @@
 <script lang="ts" setup>
+const route = useRoute();
 const colorMode = useColorMode();
 const color = computed(() => (colorMode.value === "dark" ? "#181d22" : "#f6f7f8"));
 const runtimeConfig = useRuntimeConfig();
 const gaId = runtimeConfig.public.gaId;
 const siteUrl = "https://upsidelifts.com";
 const ogImageUrl = `${siteUrl}/images/home/hero-alta.jpg`;
+const canonicalUrl = computed(() =>
+  route.path === "/" ? siteUrl : `${siteUrl}${route.path.replace(/\/$/, "")}`,
+);
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -69,7 +73,10 @@ useHead({
   ],
   link: [
     { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-    { rel: "canonical", href: siteUrl },
+    { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+    { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
+    { rel: "manifest", href: "/site.webmanifest" },
+    { rel: "canonical", href: canonicalUrl },
   ],
   script: [
     ...(gaId
@@ -101,7 +108,7 @@ useSeoMeta({
   },
   ogSiteName: "Upside Home Lifts",
   ogType: "website",
-  ogUrl: siteUrl,
+  ogUrl: canonicalUrl,
   ogImage: ogImageUrl,
   ogImageWidth: 1200,
   ogImageHeight: 896,

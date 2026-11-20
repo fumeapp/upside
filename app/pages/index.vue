@@ -89,6 +89,7 @@ const liftModels: (PageCardProps & {
   image: string;
   imageAlt: string;
   specs: string[];
+  detailPath: string;
   interestValue: LiftInterest;
 })[] = [
   {
@@ -103,6 +104,7 @@ const liftModels: (PageCardProps & {
     variant: "subtle",
     spotlight: true,
     spotlightColor: "primary",
+    detailPath: "/duo-alta",
     interestValue: "Stiltz Duo Alta (Compact 2-Person)",
   },
   {
@@ -117,6 +119,7 @@ const liftModels: (PageCardProps & {
     variant: "subtle",
     spotlight: true,
     spotlightColor: "secondary",
+    detailPath: "/trio-alta",
     interestValue: "Stiltz Trio Alta (Wheelchair Accessible)",
   },
 ];
@@ -242,6 +245,25 @@ const mobileSpecModels: {
     key: "trio",
     interestValue: "Stiltz Trio Alta (Wheelchair Accessible)",
   },
+];
+
+const ocCities = [
+  "Irvine",
+  "Newport Beach",
+  "Laguna Woods",
+  "Mission Viejo",
+  "Laguna Niguel",
+  "Laguna Beach",
+  "Dana Point",
+  "San Clemente",
+  "Costa Mesa",
+  "Huntington Beach",
+  "Yorba Linda",
+  "Aliso Viejo",
+  "Lake Forest",
+  "Rancho Santa Margarita",
+  "Tustin",
+  "Anaheim Hills",
 ];
 
 const adChecklist = [
@@ -448,15 +470,25 @@ const faqItems: AccordionItem[] = [
               </div>
             </div>
 
-            <UButton
-              :label="`Get Free ${model.title} Estimate`"
-              color="primary"
-              variant="subtle"
-              size="md"
-              trailing-icon="i-lucide-arrow-right"
-              block
-              @click="openConsultation({ product: model.interestValue })"
-            />
+            <div class="flex flex-col gap-2 sm:flex-row">
+              <UButton
+                :label="`Get Free ${model.title} Estimate`"
+                color="primary"
+                variant="subtle"
+                size="md"
+                trailing-icon="i-lucide-arrow-right"
+                class="flex-1 justify-center"
+                @click="openConsultation({ product: model.interestValue })"
+              />
+              <UButton
+                label="Full Specs"
+                :to="model.detailPath"
+                color="neutral"
+                variant="outline"
+                size="md"
+                class="justify-center"
+              />
+            </div>
           </div>
         </UPageCard>
       </div>
@@ -754,6 +786,46 @@ const faqItems: AccordionItem[] = [
           </div>
         </UPageCard>
       </div>
+
+      <!-- Orange County Service Area coverage strip -->
+      <UPageCard variant="subtle" class="mt-6">
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div class="space-y-2.5">
+            <p class="text-highlighted flex items-center gap-2 text-sm font-semibold">
+              <UIcon name="i-lucide-map-pin" class="text-primary size-4 shrink-0" />
+              Proudly Serving Homeowners Across Orange County
+            </p>
+            <div class="flex flex-wrap gap-1.5">
+              <UBadge
+                v-for="city in ocCities"
+                :key="city"
+                :label="city"
+                color="neutral"
+                variant="outline"
+                size="sm"
+              />
+            </div>
+          </div>
+          <div class="flex shrink-0 flex-wrap gap-2">
+            <UButton
+              label="Orange County Service Area"
+              to="/orange-county"
+              color="primary"
+              variant="subtle"
+              size="sm"
+              trailing-icon="i-lucide-arrow-right"
+            />
+            <UButton
+              label="OC Pricing Guide"
+              to="/cost"
+              color="neutral"
+              variant="outline"
+              size="sm"
+              trailing-icon="i-lucide-arrow-right"
+            />
+          </div>
+        </div>
+      </UPageCard>
     </UPageSection>
 
     <USeparator />

@@ -278,9 +278,16 @@ function resetForm() {
       <UCheckbox
         v-model="state.smsOptIn"
         label="Okay to text me updates regarding my consultation"
-        description="Optional. Message & data rates may apply. Reply STOP anytime to opt out."
         name="smsOptIn"
-      />
+      >
+        <template #description>
+          Optional. Message &amp; data rates may apply. Reply STOP anytime to opt out. See our
+          <NuxtLink to="/privacy" class="text-primary underline underline-offset-2">
+            Privacy Policy &amp; SMS Terms
+          </NuxtLink>
+          .
+        </template>
+      </UCheckbox>
     </div>
 
     <UButton
