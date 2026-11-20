@@ -71,8 +71,8 @@ export const buildConsultationEmail = (payload: ConsultationPayload) => {
             <td style="padding: 8px 0; color: #181d22; font-weight: 600; border-bottom: 1px solid #eceff1;">${escapeHtml(payload.productInterest)}</td>
           </tr>
           <tr>
-            <td style="padding: 8px 0; color: #5a6670; border-bottom: 1px solid #eceff1;">OC 55+ Special</td>
-            <td style="padding: 8px 0; color: #181d22; border-bottom: 1px solid #eceff1;">${payload.ocSpecial ? "Yes — requested details" : "Not selected"}</td>
+            <td style="padding: 8px 0; color: #5a6670; border-bottom: 1px solid #eceff1;">Veteran Special</td>
+            <td style="padding: 8px 0; color: #181d22; border-bottom: 1px solid #eceff1;">${payload.veteranSpecial ? "Yes — requested details" : "Not selected"}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; color: #5a6670;">SMS Follow-Up Opt-In</td>
@@ -102,7 +102,7 @@ export const buildConsultationEmail = (payload: ConsultationPayload) => {
     `Installation ZIP: ${payload.zipCode}`,
     `Preferred Contact: ${payload.contactMethod}`,
     `Model Interest: ${payload.productInterest}`,
-    `OC 55+ Special: ${payload.ocSpecial ? "Yes" : "No"}`,
+    `Veteran Special: ${payload.veteranSpecial ? "Yes" : "No"}`,
     `SMS Opt-In: ${payload.smsOptIn ? "Yes" : "No"}`,
     ``,
     `Comments:`,

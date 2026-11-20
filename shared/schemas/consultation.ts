@@ -30,7 +30,7 @@ export const consultationSchema = z.object({
   contactMethod: z.enum(CONTACT_METHODS),
   productInterest: z.enum(LIFT_INTERESTS),
   comments: z.string().trim().max(2000).optional().default(""),
-  ocSpecial: z.boolean().optional().default(false),
+  veteranSpecial: z.boolean().optional().default(false),
   smsOptIn: z.boolean().optional().default(false),
   website: z.string().max(200).optional().default(""),
 });

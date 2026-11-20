@@ -12,7 +12,7 @@ describe("consultationSchema", () => {
     contactMethod: "Phone Call" as const,
     productInterest: "Stiltz Duo Alta (Compact 2-Person)" as const,
     comments: "Looking at retrofitting next to our living room stairs.",
-    ocSpecial: true,
+    veteranSpecial: true,
     smsOptIn: true,
   };
 
@@ -21,7 +21,7 @@ describe("consultationSchema", () => {
     expect(result.success).toBe(true);
     if (result.success) {
       expect(result.data.firstName).toBe("Jane");
-      expect(result.data.ocSpecial).toBe(true);
+      expect(result.data.veteranSpecial).toBe(true);
       expect(result.data.website).toBe("");
     }
   });
@@ -58,7 +58,7 @@ describe("consultation email builder & delivery", () => {
       contactMethod: "Irvine Showroom Appointment",
       productInterest: "Stiltz Trio Alta (Wheelchair Accessible)",
       comments: "Remodeling our Newport Beach home <phase 2>.",
-      ocSpecial: true,
+      veteranSpecial: true,
       smsOptIn: false,
     });
 
@@ -68,7 +68,7 @@ describe("consultation email builder & delivery", () => {
     expect(email.html).toContain("tel:9495552200");
     expect(email.html).toContain("&lt;phase 2&gt;");
     expect(email.html).toContain("Yes — requested details");
-    expect(email.text).toContain("OC 55+ Special: Yes");
+    expect(email.text).toContain("Veteran Special: Yes");
   });
 
   it("dispatches through Cloudflare SEND_EMAIL binding when available", async () => {

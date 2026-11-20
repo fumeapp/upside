@@ -11,13 +11,13 @@ import type { LiftInterest } from "~/composables/useConsultationModal";
 const props = withDefaults(
   defineProps<{
     initialProduct?: LiftInterest;
-    initialOcSpecial?: boolean;
+    initialVeteranSpecial?: boolean;
     compact?: boolean;
     submitLabel?: string;
   }>(),
   {
     initialProduct: "Not Sure Yet — Help Me Choose",
-    initialOcSpecial: false,
+    initialVeteranSpecial: false,
     compact: false,
     submitLabel: "Get Your Free Consultation",
   },
@@ -41,7 +41,7 @@ const state = reactive<ConsultationInput>({
   contactMethod: "Phone Call",
   productInterest: props.initialProduct,
   comments: "",
-  ocSpecial: props.initialOcSpecial,
+  veteranSpecial: props.initialVeteranSpecial,
   smsOptIn: false,
   website: "",
 });
@@ -54,9 +54,9 @@ watch(
 );
 
 watch(
-  () => props.initialOcSpecial,
+  () => props.initialVeteranSpecial,
   (val) => {
-    state.ocSpecial = Boolean(val);
+    state.veteranSpecial = Boolean(val);
   },
 );
 
@@ -109,7 +109,7 @@ function resetForm() {
   state.contactMethod = "Phone Call";
   state.productInterest = props.initialProduct;
   state.comments = "";
-  state.ocSpecial = props.initialOcSpecial;
+  state.veteranSpecial = props.initialVeteranSpecial;
   state.smsOptIn = false;
   state.website = "";
   errorMessage.value = "";
@@ -263,9 +263,9 @@ function resetForm() {
 
     <div class="space-y-2.5 pt-1">
       <UCheckbox
-        v-model="state.ocSpecial"
-        label="Tell me about the OC 55+ Showroom Special"
-        name="ocSpecial"
+        v-model="state.veteranSpecial"
+        label="Tell me about the Veteran Special"
+        name="veteranSpecial"
       />
       <UCheckbox
         v-model="state.smsOptIn"

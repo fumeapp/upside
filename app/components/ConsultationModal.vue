@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { open, selectedProduct, preselectOcSpecial } = useConsultationModal();
+const { open, selectedProduct, preselectVeteranSpecial } = useConsultationModal();
 
 const trustChecks = [
   "Free in-home assessment",
@@ -36,7 +36,7 @@ const trustChecks = [
 
         <ConsultationForm
           :initial-product="selectedProduct"
-          :initial-oc-special="preselectOcSpecial"
+          :initial-veteran-special="preselectVeteranSpecial"
           compact
           submit-label="Get Your Free Estimate"
         />

@@ -85,7 +85,7 @@ const footerColumns: FooterColumn[] = [
         target: "_blank",
         active: false,
       },
-      { label: "OC 55+ Showroom Special", to: "/#showroom", active: false },
+      { label: "Veteran Special", to: "/#showroom", active: false },
     ],
   },
 ];

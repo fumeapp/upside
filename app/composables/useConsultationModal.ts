@@ -8,22 +8,25 @@ export const useConsultationModal = () => {
     "consultation-modal-product",
     () => "Not Sure Yet — Help Me Choose",
   );
-  const preselectOcSpecial = useState<boolean>("consultation-modal-oc-special", () => false);
+  const preselectVeteranSpecial = useState<boolean>(
+    "consultation-modal-veteran-special",
+    () => false,
+  );
 
-  const openConsultation = (options?: { product?: LiftInterest; ocSpecial?: boolean }) => {
+  const openConsultation = (options?: { product?: LiftInterest; veteranSpecial?: boolean }) => {
     if (options?.product) {
       selectedProduct.value = options.product;
     } else {
       selectedProduct.value = "Not Sure Yet — Help Me Choose";
     }
-    preselectOcSpecial.value = Boolean(options?.ocSpecial);
+    preselectVeteranSpecial.value = Boolean(options?.veteranSpecial);
     open.value = true;
   };
 
   return {
     open,
     selectedProduct,
-    preselectOcSpecial,
+    preselectVeteranSpecial,
     openConsultation,
   };
 };

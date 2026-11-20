@@ -243,7 +243,7 @@ const faqItems: AccordionItem[] = [
     label: "Can I see and ride a Stiltz Homelift before buying?",
     icon: "i-lucide-map-pin",
     content:
-      "Yes! Upside Home Lifts operates a dedicated showroom in Irvine at 17155 Von Karman Ave #101. Call Jeff Cullen at 949.235.4536 or submit the consultation form below to book a private appointment and ask about our OC 55+ Special.",
+      "Yes! Upside Home Lifts operates a dedicated showroom in Irvine at 17155 Von Karman Ave #101. Call Jeff Cullen at 949.235.4536 or submit the consultation form below to book a private appointment and ask about our Veteran Special.",
   },
   {
     label: "Can a Stiltz Homelift be retrofitted into my existing home?",
@@ -321,13 +321,13 @@ const faqItems: AccordionItem[] = [
             </div>
             <div class="absolute right-2.5 bottom-2.5 left-2.5 sm:right-auto sm:bottom-3 sm:left-3">
               <UButton
-                label="OC 55+ Special · Irvine Showroom"
+                label="Veteran Special · Irvine Showroom"
                 color="primary"
                 variant="solid"
                 size="xs"
-                icon="i-lucide-sparkles"
+                icon="i-lucide-medal"
                 class="max-w-full"
-                @click="openConsultation({ ocSpecial: true })"
+                @click="openConsultation({ veteranSpecial: true })"
               />
             </div>
           </div>
@@ -531,7 +531,7 @@ const faqItems: AccordionItem[] = [
       id="showroom"
       headline="Orange County Showroom"
       title="Experience a Stiltz Homelift in person in Irvine"
-      description="Call for a private showroom appointment—and be sure to ask about our OC 55+ Special."
+      description="Call for a private showroom appointment—and be sure to ask about our Veteran Special."
     >
       <div class="grid gap-6 lg:grid-cols-5">
         <!-- Business-card styled personal contact card for Jeff Cullen -->
@@ -581,17 +581,17 @@ const faqItems: AccordionItem[] = [
           </div>
         </div>
 
-        <!-- Showroom details & OC 55+ Special card -->
+        <!-- Showroom details & Veteran Special card -->
         <UPageCard variant="subtle" class="lg:col-span-3">
           <div class="flex h-full flex-col justify-between space-y-6">
             <div class="space-y-4">
               <div class="flex flex-wrap items-center gap-2">
                 <UBadge
-                  label="OC 55+ Special Available"
+                  label="Veteran Special Available"
                   color="primary"
                   variant="solid"
                   size="md"
-                  icon="i-lucide-sparkles"
+                  icon="i-lucide-medal"
                 />
                 <UBadge
                   label="By Appointment"
@@ -644,7 +644,7 @@ const faqItems: AccordionItem[] = [
                 variant="solid"
                 size="lg"
                 class="justify-center"
-                @click="openConsultation({ ocSpecial: true })"
+                @click="openConsultation({ veteranSpecial: true })"
               />
               <UButton
                 label="Call 949.235.4536"
