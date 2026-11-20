@@ -115,6 +115,15 @@ const costFaq: AccordionItem[] = [
       "In Orange County, selling and downsizing to a single-story home often costs far more in realtor commissions, closing costs, moving expenses, and California property tax reassessment than adding a Stiltz Homelift to stay in the home and neighborhood you already love.",
   },
 ];
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(buildFaqSchema(costFaq)),
+    },
+  ],
+});
 </script>
 
 <template>

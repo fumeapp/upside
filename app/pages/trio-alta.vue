@@ -88,6 +88,28 @@ const trioFaq: AccordionItem[] = [
       "Yes! Because the Trio Alta rides on twin self-supporting rails with no shaft or concrete pit, we routinely retrofit it into existing homes as well as coordinating with architects on remodels and custom new builds.",
   },
 ];
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(
+        buildProductSchema({
+          name: "Stiltz Trio Alta Home Elevator",
+          description:
+            "Wheelchair-accessible shaftless residential home elevator with 15 sq ft footprint, up to 550 lb weight limit (500 lbs per local code), up to 19.5 ft travel, and optional Thru-Car entry.",
+          image: "https://upsidelifts.com/images/home/trio-alta-studio.jpg",
+          url: "https://upsidelifts.com/trio-alta",
+          sku: "STILTZ-TRIO-ALTA",
+        }),
+      ),
+    },
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(buildFaqSchema(trioFaq)),
+    },
+  ],
+});
 </script>
 
 <template>

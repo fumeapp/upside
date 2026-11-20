@@ -316,6 +316,15 @@ const faqItems: AccordionItem[] = [
       "When the lift is downstairs, a matching floor lid automatically closes the upper ceiling opening so you can walk across it normally. Full-surface obstruction sensors above and below the cabin stop the lift instantly if anything is in its path.",
   },
 ];
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(buildFaqSchema(faqItems)),
+    },
+  ],
+});
 </script>
 
 <template>

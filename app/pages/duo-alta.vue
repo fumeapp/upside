@@ -87,6 +87,28 @@ const duoFaq: AccordionItem[] = [
       "Choose the Duo Alta if you want the smallest footprint for 1–2 standing passengers (or a small folding seat/walker). If you want space for a full-size wheelchair, a Thru-Car pass-through door, or travel height above 14 ft (up to 19.5 ft), choose the Stiltz Trio Alta.",
   },
 ];
+
+useHead({
+  script: [
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(
+        buildProductSchema({
+          name: "Stiltz Duo Alta Home Elevator",
+          description:
+            "Compact 2-person shaftless residential home elevator with 8.5 sq ft footprint, 375 lb weight limit, and up to 14 ft travel.",
+          image: "https://upsidelifts.com/images/home/duo-alta-v2.jpg",
+          url: "https://upsidelifts.com/duo-alta",
+          sku: "STILTZ-DUO-ALTA",
+        }),
+      ),
+    },
+    {
+      type: "application/ld+json",
+      innerHTML: JSON.stringify(buildFaqSchema(duoFaq)),
+    },
+  ],
+});
 </script>
 
 <template>

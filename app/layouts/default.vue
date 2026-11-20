@@ -22,7 +22,11 @@ const navItems = computed<NavigationMenuItem[]>(() => [
     label: "Models",
     icon: "i-lucide-layers",
     to: "/#models",
-    active: route.path === "/duo-alta" || route.path === "/trio-alta",
+    active:
+      route.path === "/duo-alta" ||
+      route.path === "/trio-alta" ||
+      route.path === "/duo-alta-vs-trio-alta" ||
+      route.path === "/stiltz-vs-stairlift",
     children: [
       {
         label: "Stiltz Duo Alta",
@@ -39,11 +43,18 @@ const navItems = computed<NavigationMenuItem[]>(() => [
         active: route.path === "/trio-alta",
       },
       {
-        label: "Compare Specifications",
-        description: "Side-by-side footprint diagrams, capacities, and ceiling requirements.",
-        icon: "i-lucide-ruler",
-        to: "/#specs",
-        active: false,
+        label: "Duo Alta vs. Trio Alta",
+        description: "Side-by-side footprints, dimensions, and ceiling guide.",
+        icon: "i-lucide-arrow-left-right",
+        to: "/duo-alta-vs-trio-alta",
+        active: route.path === "/duo-alta-vs-trio-alta",
+      },
+      {
+        label: "Stiltz vs. Stairlift",
+        description: "Compare home value, aesthetics, and wheelchair comfort.",
+        icon: "i-lucide-scale",
+        to: "/stiltz-vs-stairlift",
+        active: route.path === "/stiltz-vs-stairlift",
       },
     ],
   },
@@ -75,11 +86,12 @@ const navItems = computed<NavigationMenuItem[]>(() => [
 
 const footerColumns: FooterColumn[] = [
   {
-    label: "Stiltz Models",
+    label: "Stiltz Models & Guides",
     children: [
       { label: "Stiltz Duo Alta", to: "/duo-alta", active: false },
       { label: "Stiltz Trio Alta", to: "/trio-alta", active: false },
-      { label: "Compare Specifications", to: "/#specs", active: false },
+      { label: "Duo Alta vs. Trio Alta", to: "/duo-alta-vs-trio-alta", active: false },
+      { label: "Stiltz vs. Stairlift", to: "/stiltz-vs-stairlift", active: false },
       { label: "OC Pricing Guide", to: "/cost", active: false },
     ],
   },
