@@ -97,7 +97,7 @@ const liftModels: (PageCardProps & {
     title: "Stiltz Duo Alta",
     description:
       "The smallest-footprint Stiltz Homelift. Fits neatly beside a staircase, inside stacked closets, or in a quiet living room corner without crowding your space.",
-    image: "/images/home/duo-alta-studio.jpg",
+    image: "/images/home/duo-alta-v2.jpg",
     imageAlt: "Stiltz Duo Alta compact 2-person home elevator beside a sunlit oak staircase",
     specs: ["6.8 sq ft footprint", "375 lb capacity", "Up to 20 ft travel"],
     variant: "subtle",
