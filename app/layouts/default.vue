@@ -60,9 +60,8 @@ const footerColumns: FooterColumn[] = [
   {
     label: "Stiltz Models",
     children: [
-      { label: "Stiltz Duo+", to: "/#models", active: false },
-      { label: "Stiltz Trio+", to: "/#models", active: false },
-      { label: "Stiltz Vista", to: "/#models", active: false },
+      { label: "Stiltz Duo Alta", to: "/#models", active: false },
+      { label: "Stiltz Trio Alta", to: "/#models", active: false },
       { label: "Compare Specifications", to: "/#specs", active: false },
     ],
   },

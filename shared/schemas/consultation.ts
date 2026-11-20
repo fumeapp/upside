@@ -8,9 +8,8 @@ export const CONTACT_METHODS = [
 ] as const;
 
 export const LIFT_INTERESTS = [
-  "Stiltz Duo+ (Compact 2-Person)",
-  "Stiltz Trio+ (Wheelchair Accessible)",
-  "Stiltz Vista (Clear Panoramic)",
+  "Stiltz Duo Alta (Compact 2-Person)",
+  "Stiltz Trio Alta (Wheelchair Accessible)",
   "Not Sure Yet — Help Me Choose",
 ] as const;
 
