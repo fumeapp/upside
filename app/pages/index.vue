@@ -305,8 +305,8 @@ const faqItems: AccordionItem[] = [
         <div class="w-full min-w-0 space-y-3">
           <div class="relative overflow-hidden rounded-lg">
             <img
-              src="/images/home/hero-lift.jpg"
-              alt="Stiltz shaftless panoramic home lift installed by Upside Home Lifts"
+              src="/images/home/hero-alta.jpg"
+              alt="Stiltz Alta home elevator installed in a sunlit Orange County living room"
               class="aspect-4/3 w-full object-cover"
               loading="eager"
             />
