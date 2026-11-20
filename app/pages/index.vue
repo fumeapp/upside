@@ -97,8 +97,8 @@ const liftModels: (PageCardProps & {
     title: "Stiltz Duo Alta",
     description:
       "The smallest-footprint Stiltz Homelift. Fits neatly beside a staircase, inside stacked closets, or in a quiet living room corner without crowding your space.",
-    image: "/images/home/duo-alta.jpg",
-    imageAlt: "Stiltz Duo Alta compact 2-person home elevator installed indoors",
+    image: "/images/home/duo-alta-studio.jpg",
+    imageAlt: "Stiltz Duo Alta compact 2-person home elevator beside a sunlit oak staircase",
     specs: ["6.8 sq ft footprint", "375 lb capacity", "Up to 20 ft travel"],
     variant: "subtle",
     spotlight: true,
@@ -111,8 +111,8 @@ const liftModels: (PageCardProps & {
     title: "Stiltz Trio Alta",
     description:
       "Our spacious 3-person and full-sized wheelchair model with a wide, flush threshold and optional thru-car entry—built for effortless future-proofing.",
-    image: "/images/home/trio-alta.jpg",
-    imageAlt: "Stiltz Trio Alta wheelchair-accessible home elevator installed in a bright room",
+    image: "/images/home/trio-alta-studio.jpg",
+    imageAlt: "Stiltz Trio Alta wheelchair-accessible home elevator in a sunlit living room",
     specs: ["13.6 sq ft footprint", "500 lb capacity", "Full wheelchair ready"],
     variant: "subtle",
     spotlight: true,
@@ -398,7 +398,7 @@ const faqItems: AccordionItem[] = [
                 <img
                   :src="model.image"
                   :alt="model.imageAlt"
-                  class="aspect-3/4 w-full object-cover object-[50%_22%] transition-transform duration-300 hover:scale-105"
+                  class="aspect-4/3 w-full object-cover transition-transform duration-300 hover:scale-105"
                   loading="lazy"
                 />
               </div>
