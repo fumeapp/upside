@@ -8,136 +8,127 @@ defineProps<{
   <div
     class="footprint-grid border-default bg-default/90 dark:bg-neutral-900/90 flex w-full items-center justify-center rounded-xl border px-3 py-4 sm:px-5 sm:py-5"
   >
-    <!-- STILTZ DUO ALTA — Vector Architectural Footprint -->
+    <!-- STILTZ DUO ALTA — Precision Vector Trace of Official Stiltz Footprint -->
     <svg
       v-if="model === 'duo'"
-      viewBox="0 0 460 344"
+      viewBox="0 50 302 224"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
-      aria-label="Stiltz Duo Alta architectural footprint diagram: 31 7/8 inches by 41 1/4 inches external, 26 1/2 inches internal depth, 30 11/16 inches internal width, 23 1/8 inches entrance"
+      aria-label="Stiltz Duo Alta footprint diagram: 31 7/8 inches by 41 1/4 inches external, 26 1/2 inches internal depth, 30 11/16 inches internal width, 23 1/8 inches entrance"
       class="h-64 w-full max-w-md sm:h-76"
     >
       <defs>
         <marker
           id="duo-arrow"
           viewBox="0 0 10 10"
-          refX="8"
+          refX="8.5"
           refY="5"
-          markerWidth="6"
-          markerHeight="6"
+          markerWidth="5.5"
+          markerHeight="5.5"
           orient="auto-start-reverse"
         >
           <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" class="fill-neutral-700 dark:fill-neutral-300" />
-        </marker>
-        <marker
-          id="duo-arrow-primary"
-          viewBox="0 0 10 10"
-          refX="8"
-          refY="5"
-          markerWidth="6"
-          markerHeight="6"
-          orient="auto-start-reverse"
-        >
-          <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" class="fill-primary-600 dark:fill-primary-400" />
         </marker>
       </defs>
 
       <!-- Subtle interior floor fill -->
       <path
-        d="M 122 152 C 122 80, 174 35, 253 35 C 332 35, 384 80, 384 152 L 376 266 C 375 274, 368 279, 356 280 C 292 284, 214 284, 150 280 C 138 279, 131 274, 130 266 Z"
-        class="fill-primary-50/55 dark:fill-primary-950/25"
+        d="M 159.5 65.8 C 130 65.8, 106 75, 92 88 C 80 99, 72 113, 68.5 129 L 68.5 173 C 69.5 191, 72 209, 74.2 223.5 C 75 227.5, 77.5 229.6, 83 230.8 C 105 234.5, 132 235.6, 159.5 235.6 C 187 235.6, 214 234.5, 236 230.8 C 241.5 229.6, 244 227.5, 244.8 223.5 C 247 209, 249.5 191, 250.5 173 L 250.5 129 C 247 113, 239 99, 227 88 C 213 75, 189 65.8, 159.5 65.8 Z"
+        class="fill-primary-50/45 dark:fill-primary-950/20"
       />
 
-      <!-- Left Rail Bracket (outer + inner + bolt holes) -->
+      <!-- Outer Cabin Contour + Integrated Stiltz Twin Rail Brackets -->
       <path
-        d="M 115 133 C 96 140, 84 152, 84 164 C 84 176, 96 188, 115 195"
+        d="M 159.5 62.5 C 129 62.5, 104 72, 89 85.5 C 77 96.5, 69.5 111, 64.5 128 L 56.5 128 C 53.5 128, 51 129.8, 49.5 132.5 L 41 146.5 C 39 149.5, 39 152.5, 41 155.5 L 49.5 169.5 C 51 172.2, 53.5 174, 56.5 174 L 64.5 174 C 65.8 192, 68.2 210, 70.5 224.5 C 71.5 229.5, 74.5 232.2, 81 233.6 C 104 237.5, 132 238.8, 159.5 238.8 C 187 238.8, 215 237.5, 238 233.6 C 244.5 232.2, 247.5 229.5, 248.5 224.5 C 250.8 210, 253.2 192, 254.5 174 L 262.5 174 C 265.5 174, 268 172.2, 269.5 169.5 L 278 155.5 C 280 152.5, 280 149.5, 278 146.5 L 269.5 132.5 C 268 129.8, 265.5 128, 262.5 128 L 254.5 128 C 249.5 111, 242 96.5, 230 85.5 C 215 72, 190 62.5, 159.5 62.5 Z"
         class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="2.2"
+        stroke-width="1.75"
         stroke-linejoin="round"
-      />
-      <path
-        d="M 115 140 C 101 146, 91 155, 91 164 C 91 173, 101 182, 115 188"
-        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
-        stroke-width="1.4"
-        stroke-linejoin="round"
-      />
-      <circle
-        cx="106"
-        cy="148"
-        r="3"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.5"
-      />
-      <circle
-        cx="106"
-        cy="180"
-        r="3"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.5"
       />
 
-      <!-- Right Rail Bracket (outer + inner + bolt holes) -->
+      <!-- Stiltz Duo Alta Upper Shoulder Tabs -->
       <path
-        d="M 391 133 C 410 140, 422 152, 422 164 C 422 176, 410 188, 391 195"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="2.2"
-        stroke-linejoin="round"
+        d="M 91 84.5 C 83 85.8, 76.5 91.5, 73.5 100 C 72 104.5, 71 108.5, 70 112"
+        class="stroke-secondary-600/90 dark:stroke-secondary-400/90"
+        stroke-width="1.35"
+        stroke-linecap="round"
       />
       <path
-        d="M 391 140 C 405 146, 415 155, 415 164 C 415 173, 405 182, 391 188"
-        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
-        stroke-width="1.4"
-        stroke-linejoin="round"
-      />
-      <circle
-        cx="400"
-        cy="148"
-        r="3"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.5"
-      />
-      <circle
-        cx="400"
-        cy="180"
-        r="3"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.5"
-      />
-
-      <!-- Outer D-Shaped Cabin Shell -->
-      <path
-        d="M 115 152 C 115 74, 171 28, 253 28 C 335 28, 391 74, 391 152 L 383 268 C 382 279, 373 286, 358 287 C 292 291, 214 291, 148 287 C 133 286, 124 279, 123 268 Z"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="2.4"
-        stroke-linejoin="round"
+        d="M 228 84.5 C 236 85.8, 242.5 91.5, 245.5 100 C 247 104.5, 248 108.5, 249 112"
+        class="stroke-secondary-600/90 dark:stroke-secondary-400/90"
+        stroke-width="1.35"
+        stroke-linecap="round"
       />
 
       <!-- Inner Cabin Wall -->
       <path
-        d="M 122 152 C 122 80, 174 35, 253 35 C 332 35, 384 80, 384 152 L 376 266 C 375 274, 368 279, 356 280 C 292 284, 214 284, 150 280 C 138 279, 131 274, 130 266 Z"
-        class="stroke-secondary-600/75 dark:stroke-secondary-400/75"
-        stroke-width="1.5"
+        d="M 159.5 65.8 C 130 65.8, 106 75, 92 88 C 80 99, 72 113, 68.5 129 L 68.5 173 C 69.5 191, 72 209, 74.2 223.5 C 75 227.5, 77.5 229.6, 83 230.8 C 105 234.5, 132 235.6, 159.5 235.6 C 187 235.6, 214 234.5, 236 230.8 C 241.5 229.6, 244 227.5, 244.8 223.5 C 247 209, 249.5 191, 250.5 173 L 250.5 129 C 247 113, 239 99, 227 88 C 213 75, 189 65.8, 159.5 65.8 Z"
+        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
+        stroke-width="1.2"
         stroke-linejoin="round"
+      />
+
+      <!-- Left Rail Bracket Inner Profile & Bolt Holes -->
+      <path
+        d="M 55 135.5 L 44.8 148.5 C 43.2 150.3, 43.2 151.7, 44.8 153.5 L 55 166.5"
+        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
+        stroke-width="1.15"
+        stroke-linecap="round"
+      />
+      <circle
+        cx="59.5"
+        cy="134.5"
+        r="2.2"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.15"
+      />
+      <circle
+        cx="59.5"
+        cy="167.5"
+        r="2.2"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.15"
+      />
+
+      <!-- Right Rail Bracket Inner Profile & Bolt Holes -->
+      <path
+        d="M 264 135.5 L 274.2 148.5 C 275.8 150.3, 275.8 151.7, 274.2 153.5 L 264 166.5"
+        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
+        stroke-width="1.15"
+        stroke-linecap="round"
+      />
+      <circle
+        cx="259.5"
+        cy="134.5"
+        r="2.2"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.15"
+      />
+      <circle
+        cx="259.5"
+        cy="167.5"
+        r="2.2"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.15"
       />
 
       <!-- External Depth Arrow (Left) -->
       <line
-        x1="54"
-        y1="30"
-        x2="54"
-        y2="288"
+        x1="28"
+        y1="64"
+        x2="28"
+        y2="237.5"
         class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.4"
+        stroke-width="1.05"
         marker-start="url(#duo-arrow)"
         marker-end="url(#duo-arrow)"
       />
       <text
-        x="36"
-        y="159"
+        x="16"
+        y="151"
         text-anchor="middle"
-        transform="rotate(-90 36 159)"
-        font-size="12.5"
+        transform="rotate(-90 16 151)"
+        font-size="9.5"
         class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
       >
         31 7/8″ / 810mm
@@ -145,18 +136,215 @@ defineProps<{
 
       <!-- External Width Arrow (Bottom) -->
       <line
-        x1="86"
-        y1="312"
-        x2="420"
-        y2="312"
+        x1="40.5"
+        y1="251.5"
+        x2="278.5"
+        y2="251.5"
         class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.4"
+        stroke-width="1.05"
         marker-start="url(#duo-arrow)"
         marker-end="url(#duo-arrow)"
       />
       <text
-        x="253"
-        y="334"
+        x="159.5"
+        y="267"
+        text-anchor="middle"
+        font-size="9.5"
+        class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
+      >
+        41 1/4″ / 1047mm
+      </text>
+
+      <!-- Internal Depth Arrow (Center Vertical) -->
+      <line
+        x1="159.5"
+        y1="70"
+        x2="159.5"
+        y2="231.5"
+        class="stroke-neutral-700 dark:stroke-neutral-300"
+        stroke-width="1.05"
+        marker-start="url(#duo-arrow)"
+        marker-end="url(#duo-arrow)"
+      />
+      <text
+        x="149.5"
+        y="112"
+        text-anchor="middle"
+        transform="rotate(-90 149.5 112)"
+        font-size="8.8"
+        class="fill-neutral-700 dark:fill-neutral-200 font-medium"
+      >
+        26 1/2″ / 673mm
+      </text>
+
+      <!-- Internal Width Arrow (Center Horizontal) -->
+      <line
+        x1="73"
+        y1="151"
+        x2="246"
+        y2="151"
+        class="stroke-neutral-700 dark:stroke-neutral-300"
+        stroke-width="1.05"
+        marker-start="url(#duo-arrow)"
+        marker-end="url(#duo-arrow)"
+      />
+      <text
+        x="203"
+        y="164"
+        text-anchor="middle"
+        font-size="8.8"
+        class="fill-neutral-700 dark:fill-neutral-200 font-medium"
+      >
+        30 11/16″ / 779mm
+      </text>
+
+      <!-- Entrance / Exit Label & Width (matching official Stiltz layout) -->
+      <text
+        x="119"
+        y="226"
+        text-anchor="middle"
+        font-size="8.5"
+        class="fill-neutral-500 dark:fill-neutral-400 italic"
+      >
+        Entrance/Exit
+      </text>
+      <text
+        x="203"
+        y="226"
+        text-anchor="middle"
+        font-size="9"
+        class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
+      >
+        23 1/8″ / 587mm
+      </text>
+    </svg>
+
+    <!-- STILTZ TRIO ALTA / THRU-CAR — Precision Vector Trace of Official Stiltz Footprint -->
+    <svg
+      v-else
+      viewBox="0 52 308 368"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label="Stiltz Trio Alta and Trio Alta Thru-Car footprint diagram: 50 3/8 inches by 41 1/4 inches external, 45 3/16 inches internal depth, 30 7/16 inches internal width, 31 1/2 inches entrance"
+      class="h-72 w-full max-w-md sm:h-76"
+    >
+      <defs>
+        <marker
+          id="trio-arrow"
+          viewBox="0 0 10 10"
+          refX="8.5"
+          refY="5"
+          markerWidth="6"
+          markerHeight="6"
+          orient="auto-start-reverse"
+        >
+          <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" class="fill-neutral-700 dark:fill-neutral-300" />
+        </marker>
+      </defs>
+
+      <!-- Subtle interior floor fill -->
+      <path
+        d="M 160.5 67.8 C 122.5 67.8, 89.5 71.6, 70 78.3 C 58.5 82.4, 52.5 89.8, 52.5 98.5 C 52.5 106.8, 56.2 114.2, 62.6 120.5 C 65.3 144.5, 67.6 173, 68.5 201 L 68.5 245 C 67.6 273, 65.3 301.5, 62.6 325.5 C 56.2 331.8, 52.5 339.2, 52.5 347.5 C 52.5 356.2, 58.5 363.6, 70 367.7 C 89.5 374.4, 122.5 378.2, 160.5 378.2 C 198.5 378.2, 231.5 374.4, 251 367.7 C 262.5 363.6, 268.5 356.2, 268.5 347.5 C 268.5 339.2, 264.8 331.8, 258.4 325.5 C 255.7 301.5, 253.4 273, 252.5 245 L 252.5 201 C 253.4 173, 255.7 144.5, 258.4 120.5 C 264.8 114.2, 268.5 106.8, 268.5 98.5 C 268.5 89.8, 262.5 82.4, 251 78.3 C 231.5 71.6, 198.5 67.8, 160.5 67.8 Z"
+        class="fill-primary-50/45 dark:fill-primary-950/20"
+      />
+
+      <!-- Outer Trio Alta Cabin Contour + Integrated Stiltz Twin Rail Brackets -->
+      <path
+        d="M 160.5 64 C 121.5 64, 87.5 68, 67.5 75 C 54.8 79.5, 48.8 88, 48.8 98.5 C 48.8 108, 52.8 116.5, 59 122.5 C 61.5 146, 63.8 174, 64.5 201 L 57 201 C 54 201, 51.5 202.8, 50 205.5 L 42.5 218.5 C 40.8 221.5, 40.8 224.5, 42.5 227.5 L 50 240.5 C 51.5 243.2, 54 245, 57 245 L 64.5 245 C 63.8 272, 61.5 300, 59 323.5 C 52.8 329.5, 48.8 338, 48.8 347.5 C 48.8 358, 54.8 366.5, 67.5 371 C 87.5 378, 121.5 382, 160.5 382 C 199.5 382, 233.5 378, 253.5 371 C 266.2 366.5, 272.2 358, 272.2 347.5 C 272.2 338, 268.2 329.5, 262 323.5 C 259.5 300, 257.2 272, 256.5 245 L 264 245 C 267 245, 269.5 243.2, 271 240.5 L 278.5 227.5 C 280.2 224.5, 280.2 221.5, 278.5 218.5 L 271 205.5 C 269.5 202.8, 267 201, 264 201 L 256.5 201 C 257.2 174, 259.5 146, 262 122.5 C 268.2 116.5, 272.2 108, 272.2 98.5 C 272.2 88, 266.2 79.5, 253.5 75 C 233.5 68, 199.5 64, 160.5 64 Z"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="2"
+        stroke-linejoin="round"
+      />
+
+      <!-- Inner Cabin Wall -->
+      <path
+        d="M 160.5 67.8 C 122.5 67.8, 89.5 71.6, 70 78.3 C 58.5 82.4, 52.5 89.8, 52.5 98.5 C 52.5 106.8, 56.2 114.2, 62.6 120.5 C 65.3 144.5, 67.6 173, 68.5 201 L 68.5 245 C 67.6 273, 65.3 301.5, 62.6 325.5 C 56.2 331.8, 52.5 339.2, 52.5 347.5 C 52.5 356.2, 58.5 363.6, 70 367.7 C 89.5 374.4, 122.5 378.2, 160.5 378.2 C 198.5 378.2, 231.5 374.4, 251 367.7 C 262.5 363.6, 268.5 356.2, 268.5 347.5 C 268.5 339.2, 264.8 331.8, 258.4 325.5 C 255.7 301.5, 253.4 273, 252.5 245 L 252.5 201 C 253.4 173, 255.7 144.5, 258.4 120.5 C 264.8 114.2, 268.5 106.8, 268.5 98.5 C 268.5 89.8, 262.5 82.4, 251 78.3 C 231.5 71.6, 198.5 67.8, 160.5 67.8 Z"
+        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
+        stroke-width="1.35"
+        stroke-linejoin="round"
+      />
+
+      <!-- Left Rail Bracket Inner Profile & Bolt Holes -->
+      <path
+        d="M 55.5 207.5 L 46 220.5 C 44.5 222.2, 44.5 223.8, 46 225.5 L 55.5 238.5"
+        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
+        stroke-width="1.3"
+        stroke-linecap="round"
+      />
+      <circle
+        cx="59.8"
+        cy="207"
+        r="2.3"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.3"
+      />
+      <circle
+        cx="59.8"
+        cy="239"
+        r="2.3"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.3"
+      />
+
+      <!-- Right Rail Bracket Inner Profile & Bolt Holes -->
+      <path
+        d="M 265.5 207.5 L 275 220.5 C 276.5 222.2, 276.5 223.8, 275 225.5 L 265.5 238.5"
+        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
+        stroke-width="1.3"
+        stroke-linecap="round"
+      />
+      <circle
+        cx="261.2"
+        cy="207"
+        r="2.3"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.3"
+      />
+      <circle
+        cx="261.2"
+        cy="239"
+        r="2.3"
+        class="stroke-secondary-600 dark:stroke-secondary-400"
+        stroke-width="1.3"
+      />
+
+      <!-- External Depth Arrow (Left) -->
+      <line
+        x1="31"
+        y1="65.5"
+        x2="31"
+        y2="380.5"
+        class="stroke-neutral-700 dark:stroke-neutral-300"
+        stroke-width="1.3"
+        marker-start="url(#trio-arrow)"
+        marker-end="url(#trio-arrow)"
+      />
+      <text
+        x="15"
+        y="223"
+        text-anchor="middle"
+        transform="rotate(-90 15 223)"
+        font-size="12.5"
+        class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
+      >
+        50 3/8″ / 1280mm
+      </text>
+
+      <!-- External Width Arrow (Bottom) -->
+      <line
+        x1="42"
+        y1="395"
+        x2="279"
+        y2="395"
+        class="stroke-neutral-700 dark:stroke-neutral-300"
+        stroke-width="1.3"
+        marker-start="url(#trio-arrow)"
+        marker-end="url(#trio-arrow)"
+      />
+      <text
+        x="160.5"
+        y="413"
         text-anchor="middle"
         font-size="12.5"
         class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
@@ -166,271 +354,21 @@ defineProps<{
 
       <!-- Internal Depth Arrow (Center Vertical) -->
       <line
-        x1="253"
-        y1="38"
-        x2="253"
-        y2="278"
+        x1="160.5"
+        y1="73"
+        x2="160.5"
+        y2="373"
         class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.4"
-        marker-start="url(#duo-arrow)"
-        marker-end="url(#duo-arrow)"
-      />
-      <text
-        x="239"
-        y="102"
-        text-anchor="middle"
-        transform="rotate(-90 239 102)"
-        font-size="11.5"
-        class="fill-neutral-700 dark:fill-neutral-200 font-medium"
-      >
-        26 1/2″ / 673mm
-      </text>
-
-      <!-- Internal Width Arrow (Center Horizontal) -->
-      <line
-        x1="126"
-        y1="166"
-        x2="380"
-        y2="166"
-        class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.4"
-        marker-start="url(#duo-arrow)"
-        marker-end="url(#duo-arrow)"
-      />
-      <text
-        x="318"
-        y="184"
-        text-anchor="middle"
-        font-size="11.5"
-        class="fill-neutral-700 dark:fill-neutral-200 font-medium"
-      >
-        30 11/16″ / 779mm
-      </text>
-
-      <!-- Entrance / Exit Width Arrow (Bottom Interior) -->
-      <line
-        x1="158"
-        y1="268"
-        x2="348"
-        y2="268"
-        class="stroke-primary-600 dark:stroke-primary-400"
-        stroke-width="1.6"
-        marker-start="url(#duo-arrow-primary)"
-        marker-end="url(#duo-arrow-primary)"
-      />
-      <text
-        x="198"
-        y="256"
-        text-anchor="middle"
-        font-size="11"
-        class="fill-neutral-500 dark:fill-neutral-400 italic"
-      >
-        Entrance / Exit
-      </text>
-      <text
-        x="312"
-        y="256"
-        text-anchor="middle"
-        font-size="11.5"
-        class="fill-primary-700 dark:fill-primary-400 font-semibold"
-      >
-        23 1/8″ / 587mm
-      </text>
-    </svg>
-
-    <!-- STILTZ TRIO ALTA / THRU-CAR — Vector Architectural Footprint -->
-    <svg
-      v-else
-      viewBox="0 0 460 444"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      role="img"
-      aria-label="Stiltz Trio Alta and Trio Alta Thru-Car architectural footprint diagram: 50 3/8 inches by 41 1/4 inches external, 45 3/16 inches internal depth, 30 7/16 inches internal width, 31 1/2 inches entrance"
-      class="h-72 w-full max-w-md sm:h-76"
-    >
-      <defs>
-        <marker
-          id="trio-arrow"
-          viewBox="0 0 10 10"
-          refX="8"
-          refY="5"
-          markerWidth="6.5"
-          markerHeight="6.5"
-          orient="auto-start-reverse"
-        >
-          <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" class="fill-neutral-700 dark:fill-neutral-300" />
-        </marker>
-        <marker
-          id="trio-arrow-primary"
-          viewBox="0 0 10 10"
-          refX="8"
-          refY="5"
-          markerWidth="6.5"
-          markerHeight="6.5"
-          orient="auto-start-reverse"
-        >
-          <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" class="fill-primary-600 dark:fill-primary-400" />
-        </marker>
-      </defs>
-
-      <!-- Subtle interior floor fill -->
-      <path
-        d="M 134 62 C 134 50, 148 43, 174 41 C 224 37, 282 37, 332 41 C 358 43, 372 50, 372 62 C 372 74, 365 82, 362 92 C 357 132, 355 172, 355 212 C 355 252, 357 292, 362 332 C 365 342, 372 350, 372 362 C 372 374, 358 381, 332 383 C 282 387, 224 387, 174 383 C 148 381, 134 374, 134 362 C 134 350, 141 342, 144 332 C 149 292, 151 252, 151 212 C 151 172, 149 132, 144 92 C 141 82, 134 74, 134 62 Z"
-        class="fill-primary-50/55 dark:fill-primary-950/25"
-      />
-
-      <!-- Left Rail Bracket -->
-      <path
-        d="M 143 182 C 122 189, 108 200, 108 212 C 108 224, 122 235, 143 242"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="2.4"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M 143 189 C 127 195, 115 204, 115 212 C 115 220, 127 229, 143 235"
-        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-      />
-      <circle
-        cx="133"
-        cy="197"
-        r="3.2"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.6"
-      />
-      <circle
-        cx="133"
-        cy="227"
-        r="3.2"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.6"
-      />
-
-      <!-- Right Rail Bracket -->
-      <path
-        d="M 363 182 C 384 189, 398 200, 398 212 C 398 224, 384 235, 363 242"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="2.4"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M 363 189 C 379 195, 391 204, 391 212 C 391 220, 379 229, 363 235"
-        class="stroke-secondary-600/80 dark:stroke-secondary-400/80"
-        stroke-width="1.5"
-        stroke-linejoin="round"
-      />
-      <circle
-        cx="373"
-        cy="197"
-        r="3.2"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.6"
-      />
-      <circle
-        cx="373"
-        cy="227"
-        r="3.2"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="1.6"
-      />
-
-      <!-- Outer Trio Alta Waisted Cabin Shell -->
-      <path
-        d="M 127 60 C 127 44, 144 36, 173 34 C 224 30, 282 30, 333 34 C 362 36, 379 44, 379 60 C 379 75, 372 84, 369 94 C 364 133, 362 172, 362 212 C 362 252, 364 291, 369 330 C 372 340, 379 349, 379 364 C 379 380, 362 388, 333 390 C 282 394, 224 394, 173 390 C 144 388, 127 380, 127 364 C 127 349, 134 340, 137 330 C 142 291, 144 252, 144 212 C 144 172, 142 133, 137 94 C 134 84, 127 75, 127 60 Z"
-        class="stroke-secondary-600 dark:stroke-secondary-400"
-        stroke-width="2.6"
-        stroke-linejoin="round"
-      />
-
-      <!-- Inner Cabin Wall -->
-      <path
-        d="M 134 62 C 134 50, 148 43, 174 41 C 224 37, 282 37, 332 41 C 358 43, 372 50, 372 62 C 372 74, 365 82, 362 92 C 357 132, 355 172, 355 212 C 355 252, 357 292, 362 332 C 365 342, 372 350, 372 362 C 372 374, 358 381, 332 383 C 282 387, 224 387, 174 383 C 148 381, 134 374, 134 362 C 134 350, 141 342, 144 332 C 149 292, 151 252, 151 212 C 151 172, 149 132, 144 92 C 141 82, 134 74, 134 62 Z"
-        class="stroke-secondary-600/75 dark:stroke-secondary-400/75"
-        stroke-width="1.6"
-        stroke-linejoin="round"
-      />
-
-      <!-- Optional Thru-Car top indicator -->
-      <text
-        x="253"
-        y="17"
-        text-anchor="middle"
-        font-size="13"
-        class="fill-neutral-500 dark:fill-neutral-400 italic"
-      >
-        Optional Thru-Car Exit
-      </text>
-      <line
-        x1="168"
-        y1="44"
-        x2="338"
-        y2="44"
-        class="stroke-primary-600/65 dark:stroke-primary-400/65"
-        stroke-width="2"
-        stroke-dasharray="5 4"
-      />
-
-      <!-- External Depth Arrow (Left) -->
-      <line
-        x1="74"
-        y1="32"
-        x2="74"
-        y2="392"
-        class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.6"
+        stroke-width="1.3"
         marker-start="url(#trio-arrow)"
         marker-end="url(#trio-arrow)"
       />
       <text
-        x="52"
-        y="212"
+        x="175"
+        y="148"
         text-anchor="middle"
-        transform="rotate(-90 52 212)"
-        font-size="15"
-        class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
-      >
-        50 3/8″ / 1280mm
-      </text>
-
-      <!-- External Width Arrow (Bottom) -->
-      <line
-        x1="110"
-        y1="414"
-        x2="396"
-        y2="414"
-        class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.6"
-        marker-start="url(#trio-arrow)"
-        marker-end="url(#trio-arrow)"
-      />
-      <text
-        x="253"
-        y="438"
-        text-anchor="middle"
-        font-size="15"
-        class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
-      >
-        41 1/4″ / 1047mm
-      </text>
-
-      <!-- Internal Depth Arrow (Center Vertical) -->
-      <line
-        x1="253"
-        y1="41"
-        x2="253"
-        y2="383"
-        class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.6"
-        marker-start="url(#trio-arrow)"
-        marker-end="url(#trio-arrow)"
-      />
-      <text
-        x="273"
-        y="128"
-        text-anchor="middle"
-        transform="rotate(-90 273 128)"
-        font-size="13.5"
+        transform="rotate(-90 175 148)"
+        font-size="11.5"
         class="fill-neutral-700 dark:fill-neutral-200 font-medium"
       >
         45 3/16″ / 1147mm
@@ -438,59 +376,51 @@ defineProps<{
 
       <!-- Internal Width Arrow (Center Horizontal) -->
       <line
-        x1="155"
-        y1="212"
-        x2="351"
-        y2="212"
+        x1="74"
+        y1="223"
+        x2="247"
+        y2="223"
         class="stroke-neutral-700 dark:stroke-neutral-300"
-        stroke-width="1.6"
+        stroke-width="1.3"
         marker-start="url(#trio-arrow)"
         marker-end="url(#trio-arrow)"
       />
-      <rect
-        x="189"
-        y="220"
-        width="128"
-        height="22"
-        rx="4"
-        class="fill-white/95 dark:fill-neutral-900/95"
-      />
       <text
-        x="253"
-        y="235"
+        x="207"
+        y="238"
         text-anchor="middle"
-        font-size="13"
+        font-size="9.2"
         class="fill-neutral-700 dark:fill-neutral-200 font-medium"
       >
         30 7/16″ / 773mm
       </text>
 
-      <!-- Entrance / Exit Width Arrow (Bottom Interior) -->
+      <!-- Entrance / Exit Width Arrow (Bottom Interior, matching official Stiltz layout) -->
       <line
-        x1="142"
-        y1="350"
-        x2="364"
-        y2="350"
-        class="stroke-primary-600 dark:stroke-primary-400"
-        stroke-width="1.8"
-        marker-start="url(#trio-arrow-primary)"
-        marker-end="url(#trio-arrow-primary)"
+        x1="58"
+        y1="348"
+        x2="263"
+        y2="348"
+        class="stroke-neutral-700 dark:stroke-neutral-300"
+        stroke-width="1.3"
+        marker-start="url(#trio-arrow)"
+        marker-end="url(#trio-arrow)"
       />
       <text
-        x="196"
-        y="372"
+        x="112"
+        y="365"
         text-anchor="middle"
-        font-size="13"
+        font-size="10"
         class="fill-neutral-500 dark:fill-neutral-400 italic"
       >
-        Entrance / Exit
+        Entrance/Exit
       </text>
       <text
-        x="312"
-        y="372"
+        x="212"
+        y="365"
         text-anchor="middle"
-        font-size="13.5"
-        class="fill-primary-700 dark:fill-primary-400 font-semibold"
+        font-size="10"
+        class="fill-neutral-700 dark:fill-neutral-200 font-semibold"
       >
         31 1/2″ / 800mm
       </text>
