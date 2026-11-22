@@ -174,15 +174,7 @@ useHead({
               <h3 class="text-highlighted text-lg font-bold">Duo Alta Footprint Diagram</h3>
               <UBadge label="8.5 sq ft · 375 lb" color="primary" variant="subtle" size="sm" />
             </div>
-            <div
-              class="flex min-h-72 items-center justify-center rounded-xl border border-neutral-200 bg-white p-4 sm:p-6"
-            >
-              <img
-                src="/images/specs/duo-alta-footprint.jpg"
-                alt="Stiltz Duo Alta official footprint dimension diagram"
-                class="max-h-80 w-auto object-contain"
-              />
-            </div>
+            <FootprintDiagram model="duo" />
             <p class="text-muted text-xs leading-relaxed">
               Dimensions are for general reference and are not to be used for construction purposes.
               4″ reduced cab height available by special order.

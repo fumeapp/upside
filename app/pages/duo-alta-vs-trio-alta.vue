@@ -242,18 +242,9 @@ useHead({
           <div class="space-y-3">
             <div class="flex items-center justify-between gap-2">
               <h3 class="text-highlighted font-bold">Duo Alta Footprint</h3>
-              <UBadge label="8.5 sq ft" color="primary" variant="subtle" size="sm" />
+              <UBadge label="8.5 sq ft · 375 lb" color="primary" variant="subtle" size="sm" />
             </div>
-            <div
-              class="flex min-h-72 items-center justify-center rounded-xl border border-neutral-200 bg-white p-4"
-            >
-              <img
-                src="/images/specs/duo-alta-footprint.jpg"
-                alt="Stiltz Duo Alta footprint diagram"
-                class="max-h-72 w-auto object-contain"
-                loading="lazy"
-              />
-            </div>
+            <FootprintDiagram model="duo" />
           </div>
         </UPageCard>
 
@@ -261,18 +252,9 @@ useHead({
           <div class="space-y-3">
             <div class="flex items-center justify-between gap-2">
               <h3 class="text-highlighted font-bold">Trio Alta / Thru-Car Footprint</h3>
-              <UBadge label="15 sq ft" color="secondary" variant="subtle" size="sm" />
+              <UBadge label="15 sq ft · 550 lb*" color="secondary" variant="subtle" size="sm" />
             </div>
-            <div
-              class="flex min-h-72 items-center justify-center rounded-xl border border-neutral-200 bg-white p-4"
-            >
-              <img
-                src="/images/specs/trio-alta-footprint.jpg"
-                alt="Stiltz Trio Alta and Thru-Car footprint diagram"
-                class="max-h-80 w-auto object-contain"
-                loading="lazy"
-              />
-            </div>
+            <FootprintDiagram model="trio" />
           </div>
         </UPageCard>
       </div>
